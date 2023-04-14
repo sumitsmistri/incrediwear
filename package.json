@@ -2,11 +2,12 @@
   "name": "incrediwearnext",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://incrediwear-app-6xk4p.ondigitalocean.app/",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "export": "npm run build && next export"
+    "postbuild": "next-sitemap",
+    "start": "NODE_ENV=production node server.js"
   }, 
   "dependencies": {
     "@next/font": "13.1.1",
