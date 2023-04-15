@@ -1,13 +1,13 @@
 {
-  "name": "incrediwearnext",
+  "name": "incrediwear",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://incrediwear-app-6xk4p.ondigitalocean.app/",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
-  }, 
+    "start": "next start",
+    "export": "npm run build && next export -o _static"
+  },  
   "dependencies": {
     "@next/font": "13.1.1",
     "@reduxjs/toolkit": "^1.9.1",

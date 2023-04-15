@@ -40,9 +40,9 @@ function FullScreenIcon() {
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
-        class="jsx-6edcd6c4ce59f1a6 fullScreenIcon"
+        className="jsx-6edcd6c4ce59f1a6 fullScreenIcon"
         opacity="1"
-        transformOrigin="12px 12px"
+        transformorigin="12px 12px"
       >
         <rect
           x="-2"
