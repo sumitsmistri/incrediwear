@@ -39,9 +39,9 @@ function Slide_02() {
       audio.play();
     }, 1000);
     console.log("Sdf");
-    // setTimeout(() => {
-    //   router.push("/slides/06");
-    // }, 35000);
+    /* setTimeout(() => {
+      router.push("/slides/06");
+    }, 35000); */
 
     return () => {
       audio.pause();
@@ -76,12 +76,14 @@ function Slide_02() {
 
   const setDim = () => {
     let h = document.body.clientHeight;
-    let w = (baseImgSize.w * h) / baseImgSize.h;
+    let w = (document.body.clientWidth >= 575) ? (baseImgSize.w * h) / baseImgSize.h : document.body.clientWidth ;
 
-    if (document.body.clientWidth <= w) {
-      w = document.body.clientWidth;
-      let ch = (baseImgSize.h * w) / baseImgSize.w;
-      h = ch;
+    if (document.body.clientWidth >= 575) {
+      if (document.body.clientWidth <= w) {
+        w = document.body.clientWidth;
+        let ch = (baseImgSize.h * w) / baseImgSize.w;
+        h = ch;
+      }
     }
 
     // PAGE
@@ -110,12 +112,13 @@ function Slide_02() {
         <title>Incrediwear Interactive - 05</title>
       </Helmet>
       {slideData.bg ? (
-        <motion.main style={Styles.slide} className={`slidePage slidePage `}>
+        <motion.main style={Styles.slide} className={`slidePage slidePage page_5`}>
           <div className={`container bg-none color-white slider-5`}>
             <motion.div
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
+              className="first-box"
             >
               <span
                 className="text size-2xl color-standard "
@@ -126,12 +129,13 @@ function Slide_02() {
                 dangerouslySetInnerHTML={{ __html: slideData.title_2 }}
               ></span>
             </motion.div>
-            <div style={{ marginBottom: "8rem" }}></div>
+            <div style={{ marginBottom: "8rem" }} className="no_mob"></div>
 
             <motion.div
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 6, duration: 0.5 }}
+              className="sec_box"
             >
               <span className="text size-s color-standard ">
                 1. Guess what <em>percent of people</em> coming into
@@ -140,11 +144,12 @@ function Slide_02() {
               </span>
               <RangeInput ischanged={setfistans} />
             </motion.div>
-            <div style={Styles.blankMargin}></div>
+            <div style={Styles.blankMargin} className="no_mob"></div>
             <motion.div
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 16, duration: 0.5 }}
+              className="third_box"
             >
               <span className="text size-s color-standard ">
                 2.What <em>percentage of customers</em> in your store

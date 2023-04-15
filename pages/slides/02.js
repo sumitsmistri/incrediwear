@@ -61,12 +61,14 @@ function Slide_02() {
 
   const setDim = () => {
     let h = document.body.clientHeight;
-    let w = (baseImgSize.w * h) / baseImgSize.h;
+    let w = (document.body.clientWidth >= 575) ? (baseImgSize.w * h) / baseImgSize.h : document.body.clientWidth ;
 
-    if (document.body.clientWidth <= w) {
-      w = document.body.clientWidth;
-      let ch = (baseImgSize.h * w) / baseImgSize.w;
-      h = ch;
+    if (document.body.clientWidth >= 575) {
+      if (document.body.clientWidth <= w) {
+        w = document.body.clientWidth;
+        let ch = (baseImgSize.h * w) / baseImgSize.w;
+        h = ch;
+      }
     }
 
     // PAGE
@@ -118,7 +120,7 @@ function Slide_02() {
           }}
           transition={{ delay: 0, duration: 1 }}
           style={Styles.slide}
-          className={`slidePage slidePage`}
+          className={`slidePage slidePage page_2`}
         >
           <div className={`container bg-none slider-2`}>
             <motion.div
@@ -131,7 +133,7 @@ function Slide_02() {
                 dangerouslySetInnerHTML={{ __html: slideData.title_1 }}
               ></span>
             </motion.div>
-            <div style={Styles.blankMargin}></div>
+            <div style={Styles.blankMargin} className="no_mobile"></div>
             <motion.div
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -176,7 +178,7 @@ function Slide_02() {
                 </div>
               </div>
             </motion.div>
-            <div style={Styles.blankMargin}></div>
+            <div style={Styles.blankMargin} className="no_mobile"></div>
             <div className="so2_wrap">
               <div className="row">
                 {/* <div className="checkboxwrap clickable">
@@ -235,7 +237,7 @@ function Slide_02() {
                 </div> */}
               </div>
             </div>
-            <div style={Styles.blankMargin}></div>
+            <div style={Styles.blankMargin} className="no_mobile"></div>
             <div className="jsx-6aa79e3230815163 horizontalEnd">
               <div className="jsx-6aa79e3230815163">
                 <div className="">

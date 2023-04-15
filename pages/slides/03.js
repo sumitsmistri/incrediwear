@@ -21,7 +21,7 @@ function Slide_02() {
   const [slideData, setslideData] = useState({
     bg: bgs[2],
     logo: "/incrediwear_logo.webp",
-    title_1: `<em>Thanks</em><br/>${name != "" ? name : "JOHN"},`,
+    title_1: `<em>Thanks </em><br/>${name != "" ? name : "JOHN"},`,
     title_2: "For taking a few minutes to watch this presentation",
   });
 
@@ -56,12 +56,14 @@ function Slide_02() {
 
   const setDim = () => {
     let h = document.body.clientHeight;
-    let w = (baseImgSize.w * h) / baseImgSize.h;
+    let w = (document.body.clientWidth >= 575) ? (baseImgSize.w * h) / baseImgSize.h : document.body.clientWidth ;
 
-    if (document.body.clientWidth <= w) {
-      w = document.body.clientWidth;
-      let ch = (baseImgSize.h * w) / baseImgSize.w;
-      h = ch;
+    if (document.body.clientWidth >= 575) {
+      if (document.body.clientWidth <= w) {
+        w = document.body.clientWidth;
+        let ch = (baseImgSize.h * w) / baseImgSize.w;
+        h = ch;
+      }
     }
 
     // PAGE
@@ -90,7 +92,7 @@ function Slide_02() {
         <title>Incrediwear Interactive - 03</title>
       </Helmet>
       {slideData.bg ? (
-        <motion.main style={Styles.slide} className={`slidePage slidePage`}>
+        <motion.main style={Styles.slide} className={`slidePage slidePage page_3`}>
           <div className={`container bg-none slider-3`}>
             <motion.div
               initial={{ x: 50, opacity: 0 }}
@@ -101,6 +103,7 @@ function Slide_02() {
                 src={slideData.logo}
                 alt="Incrediwear Logo"
                 style={{ maxWidth: "100%" }}
+                className="logo"
               />
               <div style={Styles.blankMargin}></div>
               <span

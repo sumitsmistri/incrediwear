@@ -61,12 +61,14 @@ function Slide_02() {
 
   const setDim = () => {
     let h = document.body.clientHeight;
-    let w = (baseImgSize.w * h) / baseImgSize.h;
+    let w = (document.body.clientWidth >= 575) ? (baseImgSize.w * h) / baseImgSize.h : document.body.clientWidth ;
 
-    if (document.body.clientWidth <= w) {
-      w = document.body.clientWidth;
-      let ch = (baseImgSize.h * w) / baseImgSize.w;
-      h = ch;
+    if (document.body.clientWidth >= 575) {
+      if (document.body.clientWidth <= w) {
+        w = document.body.clientWidth;
+        let ch = (baseImgSize.h * w) / baseImgSize.w;
+        h = ch;
+      }
     }
 
     // PAGE
@@ -95,7 +97,7 @@ function Slide_02() {
         <title>Incrediwear Interactive - 04</title>
       </Helmet>
       {slideData.bg ? (
-        <motion.main style={Styles.slide} className={`slidePage slidePage`}>
+        <motion.main style={Styles.slide} className={`slidePage slidePage page_4`}>
           <div className={`container bg-none slider-4`}>
             <motion.div
               initial={{ x: 50, opacity: 0 }}
@@ -114,7 +116,7 @@ function Slide_02() {
               transition={{ delay: 1, duration: 0.5 }}
             >
               <span className="jsx-1883533983 text size-m color-standard">
-                <div className="jsx-66bca6dac4267587">
+                <div className="jsx-66bca6dac4267587 low_text">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="4rem"
