@@ -18,8 +18,7 @@ export default function App({ Component, pageProps }) {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
         />
       </Head>
-      {/* <AppInside Component={Component} pageProps={pageProps} /> */}
-      <Component {...pageProps} />
+      <AppInside Component={Component} pageProps={pageProps} />
     </Provider>
   );
 }
