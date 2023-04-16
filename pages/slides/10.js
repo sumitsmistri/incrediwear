@@ -57,12 +57,14 @@ function Slide_10() {
 
   const setDim = () => {
     let h = document.body.clientHeight;
-    let w = (baseImgSize.w * h) / baseImgSize.h;
+    let w = (document.body.clientWidth >= 575) ? (baseImgSize.w * h) / baseImgSize.h : document.body.clientWidth ;
 
-    if (document.body.clientWidth <= w) {
-      w = document.body.clientWidth;
-      let ch = (baseImgSize.h * w) / baseImgSize.w;
-      h = ch;
+    if (document.body.clientWidth >= 575) {
+      if (document.body.clientWidth <= w) {
+        w = document.body.clientWidth;
+        let ch = (baseImgSize.h * w) / baseImgSize.w;
+        h = ch;
+      }
     }
 
     // PAGE
@@ -91,9 +93,9 @@ function Slide_10() {
         <title>Incrediwear Interactive - 10</title>
       </Helmet>
       {slideData.bg ? (
-        <motion.main style={Styles.slide} className={`slidePage slidePage`}>
-          <div className={`container bg-none slider-10`}>
-            <div style={Styles.blankMargin}></div>
+        <motion.main style={Styles.slide} className={`slidePage slidePage page_10`}>
+          <div className={`container bg-none slider-10 first`}>
+            <div style={Styles.blankMargin} className="less_margin"></div>
             <motion.div
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -111,9 +113,9 @@ function Slide_10() {
             initial={{ y: 150, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1, duration: 0.5 }}
-            className="jsx-334748211 container bg-none"
+            className="jsx-334748211 container bg-none second"
           >
-            <div className="jsx-3882112729 ">
+            <div className="jsx-3882112729 flex--box">
               <div className="">
                 <div className="jsx-383eab4433b76272 videobox">
                   <VideoArea />

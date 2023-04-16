@@ -1755,6 +1755,15 @@ a.submitQustionLink:hover{
 }
 
 @media (max-width: 575px) {
+
+  .wrapper .overlay {
+    width: 100vw;
+    padding: 70px 20px 20px 20px;
+  }
+  .wrapper .overlay .btn {
+    font-size: 2rem;
+  }
+
   .page_1.slidePage {
     background-size: cover;
     background-image: url(/slides/01/bg1.jpg) !important;
@@ -1875,7 +1884,7 @@ a.submitQustionLink:hover{
     line-height: 4rem;
     position: absolute;
     top: 10%;
-    background: #fff;
+    /* background: #fff; */
     padding: 5px;
   }
   .page_4 .low_text {
@@ -1889,9 +1898,6 @@ a.submitQustionLink:hover{
   }
   .page_4 .low_text br {
     display: none;
-  }
-  .page_4 .wrapper .overlay {
-    width: 100vw;
   }
 
   /* slide 5 */
@@ -1922,18 +1928,18 @@ a.submitQustionLink:hover{
     display: none;
   }
   .page_5 .first-box {
-    background: #8cb16c;
+    /* background: #8cb16c; */
     padding: 10px;
   }
   .page_5 .no_mob {
     margin: 0 0 1rem 0 !important;
   }
   .page_5 .sec_box {
-    background: #8cb16c;
+    /* background: #8cb16c; */
     padding: 10px 10px 1px 10px;
   }
   .page_5 .third_box {
-    background: #8cb16c;
+    /* background: #8cb16c; */
     padding: 10px 10px 1px 10px;
   }
   
@@ -1952,7 +1958,198 @@ a.submitQustionLink:hover{
     bottom: -92%;
     padding-right: 0 !important;
   }
-  .page_5 .wrapper .overlay {
-    width: 100vw;
+
+  /* slide 6 */
+
+  .page_6.slidePage {
+    background-size: cover;
+    background-image: url(/slides/06/bg6.jpg) !important;
+    background-position: center center;
+    padding: 5%;
   }
+  .page_6 .container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    padding: 20px;
+    background: none;
+  }
+  .page_6 .size-s {
+    font-size: 1.6rem;
+  }
+  .page_6 .no-mob {
+    margin-top: 1.5rem !important;
+  }
+
+  /* slide 7 */
+
+  .page_7.slidePage {
+    background-size: cover;
+    background-image: url(/slides/07/bg7.jpg) !important;
+    background-position: center center;
+    padding: 5%;
+  }
+  .page_7 .container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    padding: 20px;
+  }
+  .page_7 .no-mob {
+    display: none;
+  }
+  .page_7 .size-l {
+    font-size: 2rem;
+  }
+  .page_7 .size-xl {
+    font-size: 3rem;
+  }
+  .page_7 .size-l br {
+    display: none;
+  }
+
+  /* slide 8 */
+
+  .page_8.slidePage {
+    background-size: cover;
+    background-image: url(/slides/08/bg8.jpg) !important;
+    background-position: center center;
+    padding: 5%;
+  }
+  .page_8 .container {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    padding: 20px;
+  }
+  .page_8 .no-mob {
+    margin-top: 3rem !important;
+  }
+  .page_8 .size-2xl {
+    font-size: 3rem;
+  }
+  .page_8 .size-m {
+    font-size: 1.6rem;
+  }
+  .page_8 .logo {
+    margin-top: 1rem;
+  }
+
+  /* slide 9 */
+
+  .page_9.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/09/bg9.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_9 .container {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    left: 0;
+    padding: 20px;
+  }
+  
+  .page_9 .size-2xl {
+    font-size: 2.5rem;
+  }
+  .page_9 .size-m {
+    font-size: 1.7rem;
+  }
+  .page_9 li {
+    padding: 0 0 10px 0;
+  }
+  .page_9 .less_margin {
+    margin-top: 1rem !important;
+  }
+  .page_9 .fixed.image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    max-width: 200px;
+  }
+  .page_9 .image.image1 {
+    right: unset;
+    top: unset;
+    bottom: -50%;
+    left: 0;
+  }
+  .page_9 .image.image2 {
+    right: 0;
+    top: unset;
+    bottom: -52%;
+    left: unset;
+  }
+  .page_9 .image.image3 {
+    right: unset;
+    top: unset;
+    bottom: -65%;
+    left: 0;
+  }
+  .page_9 .image.image4 {
+    right: 0;
+    top: unset;
+    bottom: -67%;
+    left: unset;
+  }
+
+  /* slide 10 */
+
+  .page_10.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/10/bg10.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_10 .container.first,
+  .page_10 .container.second {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    left: 0;
+    padding: 10px;
+  }
+  .page_10 .less_margin {
+    margin-top: 4rem !important;
+  }
+  .page_10 .size-2xl {
+    font-size: 2.5rem;
+  }
+  .page_10 .size-2xl br {
+    display: none;
+  }
+  .page_10 .flex--box {
+    flex-direction: column;
+    grid-gap: 3rem;
+  }
+  .page_10 .videobox {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .page_10 .size-s {
+    font-size: 1.5rem;
+    width: 70%;
+    display: block;
+  }
+  .page_10 .button.size-m {
+    bottom: 5rem !important;
+    padding: 1rem 2rem;
+  }
+  .page_10 .text.size-m {
+    font-size: 2rem;
+  }
+  .page_10 .button.size-m .icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
 }

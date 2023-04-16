@@ -134,9 +134,12 @@ function MenuSite({ next, previous, hide, islight = false, islast = false }) {
                   islast ? "isDisabled" : ``
                 } `}
                 onClick={() =>
-                  router.push(
-                    `${next < 10 ? `/slides/0${next}` : `/slides/${next}`}`
-                  )
+                  {
+                    router.push(
+                      `${next < 10 ? `/slides/0${next}` : `/slides/${next}`}`
+                    )
+                    hideMenu();
+                  }
                 }
               >
                 <svg
@@ -160,13 +163,16 @@ function MenuSite({ next, previous, hide, islight = false, islast = false }) {
               <div
                 className="jsx-730d5bc48b16cda8 btn"
                 onClick={() =>
-                  router.push(
-                    `${
-                      previous < 10
-                        ? `/slides/0${previous}`
-                        : `/slides/${previous}`
-                    }`
-                  )
+                  {
+                    router.push(
+                      `${
+                        previous < 10
+                          ? `/slides/0${previous}`
+                          : `/slides/${previous}`
+                      }`
+                    )
+                    hideMenu();
+                  }
                 }
               >
                 <svg
@@ -189,7 +195,7 @@ function MenuSite({ next, previous, hide, islight = false, islast = false }) {
             <div className="">
               <div
                 className="jsx-730d5bc48b16cda8 btn"
-                onClick={() => router.push(`/slides/01`)}
+                onClick={() => { router.push(`/slides/01`); hideMenu(); } }
               >
                 <svg
                   viewBox="0 0 33 32"
