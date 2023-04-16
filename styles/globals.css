@@ -2152,4 +2152,136 @@ a.submitQustionLink:hover{
     height: 3rem;
   }
 
+  /* slide 11 */
+
+  .page_11.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/11/bg11.jpg) !important;
+    background-position: center top !important;
+    padding: 5%;
+  }
+  .page_11 .container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    left: 0;
+    padding: 10px;
+    background: none;
+    position: absolute;
+    bottom: 10%;
+  }
+  .page_11 .size-2xl {
+    font-size: 3rem;
+  }
+  .page_11 .size-m {
+    font-size: 2rem;
+  }
+
+  /* slide 12 */
+
+  .page_12.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/12/bg12.jpg) !important;
+    background-position: center top !important;
+    padding: 5%;
+  }
+  .page_12 .container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    left: 0;
+    padding: 10px;
+    top: 9%;
+    background: none;
+  }
+  .page_12 .size-2xl {
+    font-size: 2rem;
+  }
+  .page_12 .statisticsRow {
+    margin-top: 2rem !important;
+    grid-gap: 1rem !important;
+    justify-content: center;
+  }
+  .page_12 .size-xl {
+    font-size: 2rem;
+  }
+  .page_12 .pieChart .size-xl {
+    font-size: 1.5rem;
+  }
+  .page_12 .pieChart {
+    width: 8rem;
+    height: 8rem; 
+  }
+  .page_12 .pieChart-3 {
+    width: 15rem;
+    height: 15rem; 
+  }
+  /* slide 13 */
+
+  .page_13.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/13/bg13.jpg) !important;
+    background-position: center top !important;
+    padding: 5%;
+  }
+  .page_13 .container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    left: 0;
+    padding: 10px;
+    top: 9%;
+    background: none;
+    position: relative;
+  }
+  .page_13 .size-m {
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 13%;
+  }
+  .page_13 .size-2xl {
+    font-size: 2.5rem;
+  }
+  /* slide 14 */
+
+  .page_14.slidePage {
+    padding: 5%;
+  }
+  
+  .page_14 .backgroundVideo {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: scale(4);
+    overflow: hidden;
+  }
+  .page_14 .container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    left: 0;
+    padding: 10px;
+    background: white;
+    position: relative;
+  }
+  .page_14 .size-2xl {
+    font-size: 2.5rem;
+  }
+  .page_14 .size-m {
+    font-size: 2rem;
+  }
+  .page_14 .abs_btn_1 {
+    right: unset;
+    top: 100%;
+    margin-top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+  }
+  .page_14 .abs_btn_1 .icon {
+    width: 2rem;
+    height: 2rem;
+  }
 }
