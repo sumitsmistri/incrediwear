@@ -37,7 +37,7 @@ function Slide_22() {
       audio.play();
     }, 1000);
     let t = setTimeout(() => {
-      router.push("/slides/22");
+      //router.push("/slides/22");
     }, 13000);
     return () => {
       clearTimeout(t);
@@ -60,12 +60,14 @@ function Slide_22() {
 
   const setDim = () => {
     let h = document.body.clientHeight;
-    let w = (baseImgSize.w * h) / baseImgSize.h;
+    let w = (document.body.clientWidth >= 575) ? (baseImgSize.w * h) / baseImgSize.h : document.body.clientWidth ;
 
-    if (document.body.clientWidth <= w) {
-      w = document.body.clientWidth;
-      let ch = (baseImgSize.h * w) / baseImgSize.w;
-      h = ch;
+    if (document.body.clientWidth >= 575) {
+      if (document.body.clientWidth <= w) {
+        w = document.body.clientWidth;
+        let ch = (baseImgSize.h * w) / baseImgSize.w;
+        h = ch;
+      }
     }
 
     // PAGE
@@ -94,7 +96,7 @@ function Slide_22() {
         <title>Incrediwear Interactive - 21</title>
       </Helmet>
       {slideData.bg ? (
-        <motion.main style={Styles.slide} className={`slidePage slidePage`}>
+        <motion.main style={Styles.slide} className={`slidePage slidePage page_21`}>
           <div className={`container slider-21 bg-none isSlideContentWrapper`}>
             <motion.div
               initial={{ x: 50, opacity: 0 }}
@@ -109,7 +111,7 @@ function Slide_22() {
               <div style={Styles.blankMargin}></div>
             </motion.div>
           </div>
-          <div style={{ maxWidth: "90%", margin: "auto" }}>
+          <div style={{ maxWidth: "90%", margin: "auto" }} className="full_width_mob">
             <RangeInputEnergy onlyView={true} />
           </div>
           <div style={Styles.blankMargin}></div>

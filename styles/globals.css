@@ -2366,7 +2366,6 @@ a.submitQustionLink:hover{
     background-image: url(/slides/17/bg17.jpg) !important;
     background-position: center center !important;
     padding: 5%;
-    padding: 5%;
   }
   .page_17 .container {
     margin: 0;
@@ -2396,4 +2395,130 @@ a.submitQustionLink:hover{
     font-size: 2rem;
   }
 
+  /* slide 18 */
+
+  .page_18.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/18/bg18.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_18 .container {
+    margin: 0;
+    left: 0;
+    padding: 20px;
+    top: unset;
+    bottom: 20%;
+    transform: translateY(-0%) !important;
+    width: 100%;
+    background: none;
+  }
+  .page_18 .size-2xl {
+    font-size: 2rem;
+    color: #000;
+  }
+  .page_18 .animation {
+    position: absolute;
+    right: 54%;
+    top: 32%;
+    width: 18%;
+  }
+
+  /* slide 19 */
+
+  .page_19.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/19/bg19.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_19 .container {
+    width: 100%;
+    left: 0;
+    margin: 0;
+    top: 5%;
+    transform: translateY(0) !important;
+    padding: 20px;
+  }
+  .page_19 .size-2xl {
+    font-size: 3rem;
+  }
+  .page_19 .size-m {
+    font-size: 1.5rem;
+  }
+  .page_19 .size-l {
+    font-size: 2rem;
+  }
+  .page_19 .horizontalEnd {
+    justify-content: center;
+  }
+  .page_19 .less_margin {
+    margin-top: 1.5rem !important;
+  }
+
+  /* slide 20 */
+
+  .page_20.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/20/bg20.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_20 .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 70px;
+  }
+  .page_20 .size-2xl {
+    font-size: 2.5rem;
+  }
+  .page_20 .full_width_mob {
+    max-width: 100% !important;
+  }
+  .page_20 .bulbs img {
+    max-width: 260%;
+  }
+  .page_20 button .size-l {
+    font-size: 2rem;
+  }
+  .page_20 button .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  /* slide 21 */
+
+  .page_21.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/20/bg20.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+
+  .page_21 .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 70px;
+  }
+  .page_21 .size-2xl {
+    font-size: 2.5rem;
+  }
+  .page_21 .full_width_mob {
+    max-width: 100% !important;
+  }
+  .page_21 .bulbs img {
+    max-width: 260%;
+  }
+  .page_21 .size-m {
+    font-size: 1.5rem;
+    padding-left: 0 !important;
+  }
+  .page_21 .size-s {
+    font-size: 1.5rem;
+    top: unset;
+    bottom: 8%;
+    width: 100%;
+  }
 }

@@ -16,7 +16,7 @@ function RangeInputEnergy({ onlyView = false }) {
     <>
       {!onlyView && (
         <div>
-          <div className="jsx-2e857196cd1007ea row">
+          <div className="jsx-2e857196cd1007ea row bulbs">
             {Array.from(Array(parseInt(onBlubs)), (e, i) => {
               return (
                 <motion.div
@@ -78,7 +78,7 @@ function RangeInputEnergy({ onlyView = false }) {
       )}
       {onlyView && (
         <div>
-          <div className="jsx-2e857196cd1007ea row">
+          <div className="jsx-2e857196cd1007ea row bulbs">
             {Array.from(Array(parseInt(11)), (e, i) => {
               return (
                 <motion.div
