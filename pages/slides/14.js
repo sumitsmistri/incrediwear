@@ -32,13 +32,13 @@ function Slide_14() {
       setDim();
     });
     setTimeout(() => {
-      audio.play();
+      //audio.play();
     }, 1000);
     // setTimeout(() => {
     //   router.push("/slides/04");
     // }, 5000);
     return () => {
-      audio.pause();
+      //audio.pause();
     };
   }, []);
 
