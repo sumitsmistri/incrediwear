@@ -2284,4 +2284,116 @@ a.submitQustionLink:hover{
     width: 2rem;
     height: 2rem;
   }
+
+  /* slide 15 */
+
+  .page_15.slidePage {
+    background-size: cover;
+    background-image: url(/slides/15/bg15.jpg);
+    background-position: center center;
+    padding: 5%;
+  }
+  .page_15 .container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    left: 0;
+    padding: 10px;
+    position: relative;
+    top: 6%;
+    transform: none;
+  }
+  .page_15 .size-2xl {
+    font-size: 3rem;
+  }
+  .page_15 .products {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    grid-gap: 0;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .page_15 .productItem-0 {
+    top: unset;
+    left: 0;
+    bottom: 10%;
+    width: 100%;
+    position: relative;
+    height: auto;
+    max-width: 40%;
+  }
+  .page_15 .productItem-1 {
+    top: unset;
+    left: unset;
+    right: 0;
+    bottom: 10%;
+    width: 100%;
+    position: relative;
+    height: auto;
+    max-width: 40%;
+  }
+  .page_15 .size-s {
+    font-size: 1.5rem;
+  }
+
+  /* slide 16 */
+
+  .page_16.slidePage {
+    background-size: cover;
+    background-image: url(/slides/16/bg16.jpg);
+    background-position: center center;
+    padding: 5%;
+  }
+  .page_16 .container {
+    margin: 0;
+    left: 0;
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%) !important;
+  }
+  .page_16 .size-2xl {
+    font-size: 2rem;
+  }
+
+  /* slide 17 */
+
+  .page_17.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/17/bg17.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+    padding: 5%;
+  }
+  .page_17 .container {
+    margin: 0;
+    left: 0;
+    padding: 20px;
+    top: 20%;
+    transform: translateY(-0%) !important;
+    width: 100%;
+    background: none;
+  }
+  .page_17 .size-2xl {
+    font-size: 2rem;
+    color: #000;
+  }
+  .page_17 .size-2xl em {
+    color: var(--orange);
+  }
+  .page_17 .abs_btn_2 {
+    right: unset !important;
+    left: 50%;
+    transform: translateX(-50%) !important;
+    width: max-content;
+    top: unset;
+    bottom: 4%;
+  }
+  .page_17 .abs_btn_2 .text {
+    font-size: 2rem;
+  }
+
 }
