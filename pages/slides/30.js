@@ -35,7 +35,7 @@ function Slide_31() {
       audio.play();
     }, 1000);
     let t = setTimeout(() => {
-      router.push("/slides/31");
+      //router.push("/slides/31");
     }, 10000);
     return () => {
       clearTimeout(t);
@@ -58,12 +58,14 @@ function Slide_31() {
 
   const setDim = () => {
     let h = document.body.clientHeight;
-    let w = (baseImgSize.w * h) / baseImgSize.h;
+    let w = (document.body.clientWidth >= 575) ? (baseImgSize.w * h) / baseImgSize.h : document.body.clientWidth ;
 
-    if (document.body.clientWidth <= w) {
-      w = document.body.clientWidth;
-      let ch = (baseImgSize.h * w) / baseImgSize.w;
-      h = ch;
+    if (document.body.clientWidth >= 575) {
+      if (document.body.clientWidth <= w) {
+        w = document.body.clientWidth;
+        let ch = (baseImgSize.h * w) / baseImgSize.w;
+        h = ch;
+      }
     }
 
     // PAGE
@@ -103,7 +105,7 @@ function Slide_31() {
           }}
           transition={{ delay: 0, duration: 1 }}
           style={Styles.slide}
-          className={`slidePage slidePage`}
+          className={`slidePage slidePage page_30`}
         >
           <motion.div
             initial={{ marginLeft: 50, opacity: 0 }}

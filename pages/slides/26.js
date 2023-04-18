@@ -57,12 +57,14 @@ function Slide_26() {
 
   const setDim = () => {
     let h = document.body.clientHeight;
-    let w = (baseImgSize.w * h) / baseImgSize.h;
+    let w = (document.body.clientWidth >= 575) ? (baseImgSize.w * h) / baseImgSize.h : document.body.clientWidth ;
 
-    if (document.body.clientWidth <= w) {
-      w = document.body.clientWidth;
-      let ch = (baseImgSize.h * w) / baseImgSize.w;
-      h = ch;
+    if (document.body.clientWidth >= 575) {
+      if (document.body.clientWidth <= w) {
+        w = document.body.clientWidth;
+        let ch = (baseImgSize.h * w) / baseImgSize.w;
+        h = ch;
+      }
     }
 
     // PAGE
@@ -102,7 +104,7 @@ function Slide_26() {
           }}
           transition={{ delay: 0, duration: 1 }}
           style={Styles.slide}
-          className={`slidePage slidePage`}
+          className={`slidePage slidePage page_26`}
         >
           <MenuSite next={27} islight={true} previous={25} />
         </motion.main>

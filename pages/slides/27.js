@@ -58,12 +58,14 @@ function Slide_28() {
 
   const setDim = () => {
     let h = document.body.clientHeight;
-    let w = (baseImgSize.w * h) / baseImgSize.h;
+    let w = (document.body.clientWidth >= 575) ? (baseImgSize.w * h) / baseImgSize.h : document.body.clientWidth ;
 
-    if (document.body.clientWidth <= w) {
-      w = document.body.clientWidth;
-      let ch = (baseImgSize.h * w) / baseImgSize.w;
-      h = ch;
+    if (document.body.clientWidth >= 575) {
+      if (document.body.clientWidth <= w) {
+        w = document.body.clientWidth;
+        let ch = (baseImgSize.h * w) / baseImgSize.w;
+        h = ch;
+      }
     }
 
     // PAGE
@@ -103,7 +105,7 @@ function Slide_28() {
           }}
           transition={{ delay: 0, duration: 1 }}
           style={Styles.slide}
-          className={`slidePage slidePage`}
+          className={`slidePage slidePage page_27`}
         >
           <motion.div
             initial={{ y: -20, opacity: 0 }}
@@ -140,7 +142,7 @@ function Slide_28() {
                 <em>Performnance</em> enhanced in <br />
                 <em>2 ways</em>
               </motion.span>
-              <div style={Styles.blankMargin}></div>
+              <div style={Styles.blankMargin} className="no_mob"></div>
               <div className="jsx-b3dc3e38bbe26cf8 list">
                 <ul className="jsx-44adabf7c82e4b9f ">
                   <div className="">

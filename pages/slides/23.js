@@ -25,10 +25,18 @@ function Slide_24() {
     title_2: "For taking a few minutes to watch this presentation",
   });
 
+  const [is_mob, setis_mob] = useState(true);
+
   useEffect(() => {
     setDim();
     window.addEventListener("resize", function (e) {
       setDim();
+      if (document.body.clientWidth >= 575) {
+        setis_mob(true);
+      }
+      else {
+        setis_mob(false);
+      }
     });
     setTimeout(() => {
       audio.play();
@@ -56,12 +64,20 @@ function Slide_24() {
   };
   const setDim = () => {
     let h = document.body.clientHeight;
-    let w = (baseImgSize.w * h) / baseImgSize.h;
+    let w = (document.body.clientWidth >= 575) ? (baseImgSize.w * h) / baseImgSize.h : document.body.clientWidth ;
 
-    if (document.body.clientWidth <= w) {
-      w = document.body.clientWidth;
-      let ch = (baseImgSize.h * w) / baseImgSize.w;
-      h = ch;
+    if (document.body.clientWidth >= 575) {
+      if (document.body.clientWidth <= w) {
+        w = document.body.clientWidth;
+        let ch = (baseImgSize.h * w) / baseImgSize.w;
+        h = ch;
+      }
+    }
+    if (document.body.clientWidth >= 575) {
+      setis_mob(true);
+    }
+    else {
+      setis_mob(false);
     }
 
     // PAGE
@@ -89,7 +105,7 @@ function Slide_24() {
         <title>Incrediwear Interactive - 23</title>
       </Helmet>
       {slideData.bg ? (
-        <motion.main style={Styles.slide} className={`slidePage slidePage`}>
+        <motion.main style={Styles.slide} className={`slidePage slidePage page_23`}>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -112,7 +128,7 @@ function Slide_24() {
             </div>
           </motion.div>
 
-          <MenuSite islight={true} next={24} previous={22} />
+          <MenuSite islight={ is_mob } next={24} previous={22} />
         </motion.main>
       ) : (
         <Loader />

@@ -59,12 +59,14 @@ function Slide_23() {
   };
   const setDim = () => {
     let h = document.body.clientHeight;
-    let w = (baseImgSize.w * h) / baseImgSize.h;
+    let w = (document.body.clientWidth >= 575) ? (baseImgSize.w * h) / baseImgSize.h : document.body.clientWidth ;
 
-    if (document.body.clientWidth <= w) {
-      w = document.body.clientWidth;
-      let ch = (baseImgSize.h * w) / baseImgSize.w;
-      h = ch;
+    if (document.body.clientWidth >= 575) {
+      if (document.body.clientWidth <= w) {
+        w = document.body.clientWidth;
+        let ch = (baseImgSize.h * w) / baseImgSize.w;
+        h = ch;
+      }
     }
 
     // PAGE
@@ -92,7 +94,7 @@ function Slide_23() {
         <title>Incrediwear Interactive - 22</title>
       </Helmet>
       {slideData.bg ? (
-        <motion.main style={Styles.slide} className={`slidePage slidePage`}>
+        <motion.main style={Styles.slide} className={`slidePage slidePage page_22`}>
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -110,6 +112,7 @@ function Slide_23() {
                   top: "50%",
                   transform: "translateY(-50%)",
                 }}
+                className="for_mob"
               >
                 <span class="jsx-456089764 text size-2xl color-standard">
                   The heat your body produces anyway is{" "}

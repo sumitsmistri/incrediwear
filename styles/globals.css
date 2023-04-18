@@ -2521,4 +2521,229 @@ a.submitQustionLink:hover{
     bottom: 8%;
     width: 100%;
   }
+
+  /* slide 22 */
+
+  .page_22.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/22/bg22.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_22 .container {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    left: 0;
+    background: none;
+  }
+  .page_22 .size-2xl {
+    font-size: 3rem;
+  }
+  .page_22 .for_mob {
+    top: 30% !important;
+  }
+
+  /* slide 23 */
+
+  .page_23.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/23/bg23.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_23 .container {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    left: 0;
+    background: none;
+    top: 25%;
+  }
+  .page_23 .size-l {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  /* slide 24 */
+
+  .page_24.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/24/bg24.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_24 .container {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    left: 0;
+    background: none;
+    bottom: 10%;
+  }
+  .page_24 .size-xxl {
+    font-size: 4rem;
+    text-align: center;
+    display: block;
+    margin-top: 100px;
+  }
+  .page_24 .size-xl {
+    font-size: 2.5rem;
+  }
+  .page_24 .size-l {
+    font-size: 2rem;
+    line-height: 2rem !important;
+  }
+
+  /* slide 25 */
+
+  .page_25.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/25/bg25.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_25 .container {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    left: 0;
+    background: none;
+    top: 8%;
+  }
+  .page_25 .size-xl {
+    font-size: 2rem;
+  }
+
+  /* slide 26 */
+
+  .page_26.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/26/bg26.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+
+  /* slide 27 */
+
+  .page_27.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/27/bg27.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_27 .container {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    left: 0;
+    background: none;
+    top: 0;
+    transform: none;
+    position: relative;
+  }
+  .page_27 .slide-header {
+    margin-top: 4rem !important;
+  }
+  .page_27 .size-xxl {
+    font-size: 3.5rem;
+  }
+  .page_27 .list {
+    margin: 0;
+  }
+  .page_27 .size-xl {
+    font-size: 2rem;
+  }
+  .page_27 .size-m {
+    font-size: 1.5rem;
+  }
+  .page_27 .size-m li {
+    padding: 0;
+  }
+  .page_27 .no_mob {
+    margin-top: 0 !important;
+  }
+
+  /* slide 28 */
+
+  .page_28.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/28/bg28.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_28 .container {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    left: 0;
+    background: none;
+    top: unset;
+    transform: none;
+    bottom: 5%;
+  }
+  .page_28 .size-m {
+    font-size: 1.7rem;
+  }
+  .page_28 .size-m li {
+    padding: 0;
+  }
+  .page_28 .list-dark em {
+    color: #fff !important;
+  }
+
+  /* slide 29 */
+
+  .page_29.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/29/bg29.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_29 .container {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    left: 0;
+    background: none;
+    top: unset;
+    transform: none;
+    margin-top: 20px;
+  }
+  .page_29 .slide-header {
+    margin-top: 50px !important;
+  }
+  .page_29 .size-xxl {
+    font-size: 4rem;
+  }
+  .page_29 .size-l {
+    font-size: 2rem;
+  }
+  .page_29 .size-xl {
+    font-size: 3rem;
+  }
+
+  /* slide 30 */
+
+  .page_30.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/30/bg30.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_30 .container {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    left: 0;
+    background: none;
+    top: unset;
+    transform: none;
+    margin-top: 30px;
+  }
+  .page_30 .size-xl {
+    font-size: 2.5rem;
+  }
+
+
 }
