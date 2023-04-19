@@ -29,231 +29,231 @@ function AreaSelectionresult() {
               <path
                 d="M833 974.5C833 977.538 830.538 980 827.5 980C824.462 980 822 977.538 822 974.5C822 971.462 824.462 969 827.5 969C830.538 969 833 971.462 833 974.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.feet || showall) && (
               <path
                 d="M578 974.5C578 981.404 572.404 987 565.5 987C558.596 987 553 981.404 553 974.5C553 967.596 558.596 962 565.5 962C572.404 962 578 967.596 578 974.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.feet || showall) && (
               <path
                 d="M577 973H823V976H577V973Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.ankles || showall) && (
               <path
                 d="M1021 907.5C1021 910.538 1023.46 913 1026.5 913C1029.54 913 1032 910.538 1032 907.5C1032 904.462 1029.54 902 1026.5 902C1023.46 902 1021 904.462 1021 907.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.ankles || showall) && (
               <path
                 d="M1247 907.5C1247 914.404 1252.6 920 1259.5 920C1266.4 920 1272 914.404 1272 907.5C1272 900.596 1266.4 895 1259.5 895C1252.6 895 1247 900.596 1247 907.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.ankles || showall) && (
               <path
                 d="M1249 906H1031V909H1249V906Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.head || showall) && (
               <path
                 d="M946 57.5C946 60.5376 948.462 63 951.5 63C954.538 63 957 60.5376 957 57.5C957 54.4624 954.538 52 951.5 52C948.462 52 946 54.4624 946 57.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.head || showall) && (
               <path
                 d="M1210 57.5C1210 64.4036 1215.6 70 1222.5 70C1229.4 70 1235 64.4036 1235 57.5C1235 50.5964 1229.4 45 1222.5 45C1215.6 45 1210 50.5964 1210 57.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.head || showall) && (
               <path
                 d="M1212 56H956V59H1212V56Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.knees || showall) && (
               <path
                 d="M1014 737.5C1014 740.538 1016.46 743 1019.5 743C1022.54 743 1025 740.538 1025 737.5C1025 734.462 1022.54 732 1019.5 732C1016.46 732 1014 734.462 1014 737.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.knees || showall) && (
               <path
                 d="M1584 737.5C1584 744.404 1589.6 750 1596.5 750C1603.4 750 1609 744.404 1609 737.5C1609 730.596 1603.4 725 1596.5 725C1589.6 725 1584 730.596 1584 737.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.knees || showall) && (
               <path
                 d="M1585 736H1024V739H1585V736Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.elbows || showall) && (
               <path
                 d="M1066 372.5C1066 375.538 1068.46 378 1071.5 378C1074.54 378 1077 375.538 1077 372.5C1077 369.462 1074.54 367 1071.5 367C1068.46 367 1066 369.462 1066 372.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.elbows || showall) && (
               <path
                 d="M1495 372.5C1495 379.404 1500.6 385 1507.5 385C1514.4 385 1520 379.404 1520 372.5C1520 365.596 1514.4 360 1507.5 360C1500.6 360 1495 365.596 1495 372.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.elbows || showall) && (
               <path
                 d="M1497 371H1076V374H1497V371Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.handswrists || showall) && (
               <path
                 d="M1094 531.5C1094 534.538 1096.46 537 1099.5 537C1102.54 537 1105 534.538 1105 531.5C1105 528.462 1102.54 526 1099.5 526C1096.46 526 1094 528.462 1094 531.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.handswrists || showall) && (
               <path
                 d="M1856 531.5C1856 538.404 1861.6 544 1868.5 544C1875.4 544 1881 538.404 1881 531.5C1881 524.596 1875.4 519 1868.5 519C1861.6 519 1856 524.596 1856 531.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.handswrists || showall) && (
               <path
                 d="M1857 530H1104V533H1857V530Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.shoulders || showall) && (
               <path
                 d="M1030 193.5C1030 196.538 1032.46 199 1035.5 199C1038.54 199 1041 196.538 1041 193.5C1041 190.462 1038.54 188 1035.5 188C1032.46 188 1030 190.462 1030 193.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.shoulders || showall) && (
               <path
                 d="M1784 193.5C1784 200.404 1789.6 206 1796.5 206C1803.4 206 1809 200.404 1809 193.5C1809 186.596 1803.4 181 1796.5 181C1789.6 181 1784 186.596 1784 193.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.shoulders || showall) && (
               <path
                 d="M1786 192H1040V195H1786V192Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.back || showall) && (
               <path
                 d="M923 384.5C923 387.538 920.538 390 917.5 390C914.462 390 912 387.538 912 384.5C912 381.462 914.462 379 917.5 379C920.538 379 923 381.462 923 384.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.back || showall) && (
               <path
                 d="M574 384.5C574 391.404 568.404 397 561.5 397C554.596 397 549 391.404 549 384.5C549 377.596 554.596 372 561.5 372C568.404 372 574 377.596 574 384.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.back || showall) && (
               <path
                 d="M572 383H913V386H572V383Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.arms || showall) && (
               <path
                 d="M811.982 259H227.642V262H811.982V259Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.arms || showall) && (
               <path
                 d="M822 260.5C822 263.538 819.538 266 816.5 266C813.462 266 811 263.538 811 260.5C811 257.462 813.462 255 816.5 255C819.538 255 822 257.462 822 260.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.arms || showall) && (
               <path
                 d="M229 260.5C229 267.956 222.956 274 215.5 274C208.044 274 202 267.956 202 260.5C202 253.044 208.044 247 215.5 247C222.956 247 229 253.044 229 260.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.legs || showall) && (
               <path
                 d="M863 715.5C863 718.538 860.538 721 857.5 721C854.462 721 852 718.538 852 715.5C852 712.462 854.462 710 857.5 710C860.538 710 863 712.462 863 715.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.legs || showall) && (
               <path
                 d="M349 715.5C349 722.404 343.404 728 336.5 728C329.596 728 324 722.404 324 715.5C324 708.596 329.596 703 336.5 703C343.404 703 349 708.596 349 715.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.legs || showall) && (
               <path
                 d="M348 714H853V717H348V714Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.hip || showall) && (
               <path
                 d="M884 536.5C884 539.538 881.538 542 878.5 542C875.462 542 873 539.538 873 536.5C873 533.462 875.462 531 878.5 531C881.538 531 884 533.462 884 536.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.hip || showall) && (
               <path
                 d="M107 536.5C107 543.404 101.404 549 94.5 549C87.5964 549 82 543.404 82 536.5C82 529.596 87.5964 524 94.5 524C101.404 524 107 529.596 107 536.5Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             {(painAreas.hip || showall) && (
               <path
                 d="M106 535H874V538H106V535Z"
                 fill="#FF7D00"
-                className="jsx-ca7ff1c2e664bc3c"
+                className="jsx-ca7ff1c2e664bc3c not_for_mob"
               ></path>
             )}
             <defs className="jsx-ca7ff1c2e664bc3c">
@@ -279,7 +279,7 @@ function AreaSelectionresult() {
             </defs>
           </svg>
           {(painAreas.ankles || showall) && (
-            <div className="jsx-ca7ff1c2e664bc3c image pain-ankle visible">
+            <div className="jsx-ca7ff1c2e664bc3c image pain-ankle  all_pro visible">
               <img
                 src="/slides/35/ankle.png"
                 alt="ankle"
@@ -288,7 +288,7 @@ function AreaSelectionresult() {
             </div>
           )}
           {(painAreas.arms || showall) && (
-            <div className="jsx-ca7ff1c2e664bc3c image pain-arm visible">
+            <div className="jsx-ca7ff1c2e664bc3c image pain-arm  all_pro visible">
               <img
                 src="/slides/35/arm.png"
                 alt="arm"
@@ -297,7 +297,7 @@ function AreaSelectionresult() {
             </div>
           )}
           {(painAreas.back || showall) && (
-            <div className="jsx-ca7ff1c2e664bc3c image pain-back visible">
+            <div className="jsx-ca7ff1c2e664bc3c image pain-back  all_pro visible">
               <img
                 src="/slides/35/back.png"
                 alt="back"
@@ -306,7 +306,7 @@ function AreaSelectionresult() {
             </div>
           )}
           {(painAreas.elbows || showall) && (
-            <div className="jsx-ca7ff1c2e664bc3c image pain-elbow visible">
+            <div className="jsx-ca7ff1c2e664bc3c image pain-elbow  all_pro visible">
               <img
                 src="/slides/35/elbow.png"
                 alt="elbow"
@@ -315,7 +315,7 @@ function AreaSelectionresult() {
             </div>
           )}
           {(painAreas.feet || showall) && (
-            <div className="jsx-ca7ff1c2e664bc3c image pain-feet visible">
+            <div className="jsx-ca7ff1c2e664bc3c image pain-feet  all_pro visible">
               <img
                 src="/slides/35/feet.png"
                 alt="feet"
@@ -324,7 +324,7 @@ function AreaSelectionresult() {
             </div>
           )}
           {(painAreas.handswrists || showall) && (
-            <div className="jsx-ca7ff1c2e664bc3c image pain-hand_wrist visible">
+            <div className="jsx-ca7ff1c2e664bc3c image pain-hand_wrist  all_pro visible">
               <img
                 src="/slides/35/hand_wrist.png"
                 alt="hand_wrist"
@@ -333,7 +333,7 @@ function AreaSelectionresult() {
             </div>
           )}
           {(painAreas.head || showall) && (
-            <div className="jsx-ca7ff1c2e664bc3c image pain-head visible">
+            <div className="jsx-ca7ff1c2e664bc3c image pain-head  all_pro visible">
               <img
                 src="/slides/35/head.png"
                 alt="head"
@@ -342,7 +342,7 @@ function AreaSelectionresult() {
             </div>
           )}
           {(painAreas.hip || showall) && (
-            <div className="jsx-ca7ff1c2e664bc3c image pain-hip visible">
+            <div className="jsx-ca7ff1c2e664bc3c image pain-hip  all_pro visible">
               <img
                 src="/slides/35/hip.png"
                 alt="hip"
@@ -351,7 +351,7 @@ function AreaSelectionresult() {
             </div>
           )}
           {(painAreas.knees || showall) && (
-            <div className="jsx-ca7ff1c2e664bc3c image pain-knee visible">
+            <div className="jsx-ca7ff1c2e664bc3c image pain-knee  all_pro visible">
               <img
                 src="/slides/35/knee.png"
                 alt="knee"
@@ -360,7 +360,7 @@ function AreaSelectionresult() {
             </div>
           )}
           {(painAreas.legs || showall) && (
-            <div className="jsx-ca7ff1c2e664bc3c image pain-leg visible">
+            <div className="jsx-ca7ff1c2e664bc3c image pain-leg  all_pro visible">
               <img
                 src="/slides/35/leg.png"
                 alt="leg"
@@ -369,7 +369,7 @@ function AreaSelectionresult() {
             </div>
           )}
           {(painAreas.shoulders || showall) && (
-            <div className="jsx-ca7ff1c2e664bc3c image pain-shoulder visible">
+            <div className="jsx-ca7ff1c2e664bc3c image pain-shoulder  all_pro visible">
               <img
                 src="/slides/35/shoulder.png"
                 alt="shoulder"

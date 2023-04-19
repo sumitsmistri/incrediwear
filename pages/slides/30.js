@@ -35,7 +35,7 @@ function Slide_31() {
       audio.play();
     }, 1000);
     let t = setTimeout(() => {
-      //router.push("/slides/31");
+      router.push("/slides/31");
     }, 10000);
     return () => {
       clearTimeout(t);
