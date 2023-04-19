@@ -50,7 +50,7 @@ function Items_37() {
 
   return (
     <>
-      {total}
+      {/* {total} */}
       <div class="wwraper">
         <span className="jsx-1677480984 text size-m color-standard">
           <ul className="jsx-6ad822bbc7c679cf">

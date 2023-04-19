@@ -26,11 +26,18 @@ function Slide_39() {
     title_1: `<em>Thanks</em><br/>${name != "" ? name : "JOHN"},`,
     title_2: "For taking a few minutes to watch this presentation",
   });
+  const [is_mob, setis_mob] = useState(true);
 
   useEffect(() => {
     setDim();
     window.addEventListener("resize", function (e) {
       setDim();
+      if (document.body.clientWidth >= 575) {
+        setis_mob(true);
+      }
+      else {
+        setis_mob(false);
+      }
     });
     setTimeout(() => {
       audio.play();
@@ -59,12 +66,21 @@ function Slide_39() {
 
   const setDim = () => {
     let h = document.body.clientHeight;
-    let w = (baseImgSize.w * h) / baseImgSize.h;
+    let w = (document.body.clientWidth >= 575) ? (baseImgSize.w * h) / baseImgSize.h : document.body.clientWidth ;
 
-    if (document.body.clientWidth <= w) {
-      w = document.body.clientWidth;
-      let ch = (baseImgSize.h * w) / baseImgSize.w;
-      h = ch;
+    if (document.body.clientWidth >= 575) {
+      if (document.body.clientWidth <= w) {
+        w = document.body.clientWidth;
+        let ch = (baseImgSize.h * w) / baseImgSize.w;
+        h = ch;
+      }
+    }
+
+    if (document.body.clientWidth >= 575) {
+      setis_mob(true);
+    }
+    else {
+      setis_mob(false);
     }
 
     // PAGE
@@ -104,21 +120,25 @@ function Slide_39() {
           }}
           transition={{ delay: 0, duration: 1 }}
           style={Styles.slide}
-          className={`slidePage slidePage`}
+          className={`slidePage slidePage page_38`}
         >
           <div className={`container slider-39 isSlideContentWrapper`}>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
+              className="text-s"
             >
               <span className="jsx-456089764 text size-2xl color-standard">
                 Thank you!<div style={Styles.blankMargin}>&nbsp;</div>
-                <em className="jsx-d0a156eb4f78f1fb">
+                <em className="no_mob jsx-d0a156eb4f78f1fb">
                   {name != "" ? name : "JOHN"}
                 </em>
               </span>
               <span className="jsx-456089764 text size-l color-standard">
+                <em className="small_mob">
+                  {name != "" ? name : "JOHN"}
+                </em>
                 {" "}
                 , for taking your time to watch this presentation And{" "}
                 <em>THANK YOU</em> for helping to share <em>Incrediwear</em>{" "}
@@ -133,7 +153,7 @@ function Slide_39() {
             transition={{ delay: 2, duration: 0.5 }}
             className="jsx-977875503 container bg-none isSlideContentWrapper bottomContainer absolute lastSlideBottom"
           >
-            <div className="jsx-1098696574 ">
+            <div className="jsx-1098696574 flex">
               <div className="">
                 <span className="jsx-2589450523 text size-s color-standard">
                   Share this interactive presentation with others
@@ -149,7 +169,7 @@ function Slide_39() {
             </div>
           </motion.div>
 
-          <MenuSite next={39} islast={true} islight={true} previous={37} />
+          <MenuSite next={39} islast={true} islight={is_mob} previous={37} />
         </motion.main>
       ) : (
         <Loader />

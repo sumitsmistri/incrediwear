@@ -28,10 +28,18 @@ function Slide_36() {
     title_2: "For taking a few minutes to watch this presentation",
   });
 
+  const [is_mob, setis_mob] = useState(true);
+
   useEffect(() => {
     setDim();
     window.addEventListener("resize", function (e) {
       setDim();
+      if (document.body.clientWidth >= 575) {
+        setis_mob(true);
+      }
+      else {
+        setis_mob(false);
+      }
     });
     setTimeout(() => {
       audio.play();
@@ -60,14 +68,22 @@ function Slide_36() {
 
   const setDim = () => {
     let h = document.body.clientHeight;
-    let w = (baseImgSize.w * h) / baseImgSize.h;
+    let w = (document.body.clientWidth >= 575) ? (baseImgSize.w * h) / baseImgSize.h : document.body.clientWidth ;
 
-    if (document.body.clientWidth <= w) {
-      w = document.body.clientWidth;
-      let ch = (baseImgSize.h * w) / baseImgSize.w;
-      h = ch;
+    if (document.body.clientWidth >= 575) {
+      if (document.body.clientWidth <= w) {
+        w = document.body.clientWidth;
+        let ch = (baseImgSize.h * w) / baseImgSize.w;
+        h = ch;
+      }
     }
 
+    if (document.body.clientWidth >= 575) {
+      setis_mob(true);
+    }
+    else {
+      setis_mob(false);
+    }
     // PAGE
     let sp = document.querySelector(".slidePage");
     if (sp) {
@@ -105,7 +121,7 @@ function Slide_36() {
           }}
           transition={{ delay: 0, duration: 1 }}
           style={Styles.slide}
-          className={`slidePage slidePage`}
+          className={`slidePage slidePage page_35`}
         >
           <div className={`container slider-36 isSlideContentWrapper`}>
             <motion.div
@@ -121,7 +137,7 @@ function Slide_36() {
             </motion.div>
           </div>
 
-          <MenuSite next={36} islight={true} previous={34} />
+          <MenuSite next={36} islight={is_mob} previous={34} />
         </motion.main>
       ) : (
         <Loader />

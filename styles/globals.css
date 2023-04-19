@@ -3007,4 +3007,152 @@ a.submitQustionLink:hover{
     height: 2rem;
     top: -2px;
   }
+
+  /* slide 35 */
+
+  .page_35.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/35/bg35.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_35 .container {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    left: 0;
+    background: none;
+    top: 15%;
+    transform: none;
+  }
+  .page_35 .size-xl {
+    font-size: 2.5rem;
+    color: #000;
+  }
+  /* slide 36 */
+
+  .page_36.slidePage {
+    background-size: cover !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_36 .container {
+    padding: 0px !important;
+    position: relative;
+    margin-top: 50px;
+  }
+  .page_36 .size-2xl {
+    font-size: 2.5rem;
+    color: #000;
+    text-align: center !important;
+    display: inline-block;
+  }
+  .page_36 .wwraper {
+    width: 100%;
+  }
+  .page_36 .size-m {
+    font-size: 1.5rem;
+  }
+  .page_36 .bottomContainer {
+    margin-top: 20px;
+  }
+  .page_36 .bottomRow {
+    flex-direction: column;
+  }
+  .page_36 .progress {
+    min-width: 300px;
+    height: 20px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .page_36 .size-l {
+    font-size: 2rem;
+  }
+  .page_36 .button {
+    margin: auto;
+  }
+  .page_36 .button .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  /* slide 37 */
+
+  .page_37.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/37/bg37.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_37 .container {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    left: 0;
+    background: none;
+    top: 10%;
+    transform: none;
+  }
+  .page_37 .size-2xl {
+    font-size: 2.5rem;
+    color: #ff7e02;
+  }
+  .page_37 a.submitQustionLink {
+    font-size: 1.8rem;
+    max-width: max-content;
+  }
+
+  /* slide 38 */
+
+  .page_38.slidePage {
+    background-size: cover !important;
+    background-image: url(/slides/38/bg38.jpg) !important;
+    background-position: center center !important;
+    padding: 5%;
+  }
+  .page_38 .container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 15px;
+  }
+  .page_38 .text-s {
+    background: #ffffffba;
+    padding: 10px;
+    border-radius: 15px;
+  }
+  .page_38 .size-2xl {
+    font-size: 3rem;
+    text-align: center;
+    display: block;
+    margin-top: 10%;
+  }
+  .page_38 .size-l {
+    font-size: 1.5rem;
+  }
+  .page_38 .no_mob  {
+    display: none;
+  }
+  .page_38 .small_mob {
+    font-size: 2rem;
+  }
+  .page_38 .container.lastSlideBottom {
+    top: unset;
+    background: #ffffffba;
+    height: auto;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%) !important;
+    width: 90%;
+    border-radius: 15px;
+  }
+  .page_38 .container.lastSlideBottom .size-s {
+    font-size: 1.5rem;
+  }
+  .page_38 .container.lastSlideBottom .flex {
+    flex-direction: column;
+    text-align: center;
+    grid-gap: 1rem;
+  }
+
 }
