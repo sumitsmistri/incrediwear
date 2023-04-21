@@ -96,7 +96,7 @@ function Slide_01() {
     }
     dispatch({
       type: "toggleBgMusic",
-      payload: true,
+      payload: false,
     });
     router.push("/slides/02");
   };
