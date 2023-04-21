@@ -45,7 +45,7 @@ function Slide_02() {
     /* return () => {
       audio.pause();
     }; */
-  }, []);
+  }, [audio1]);
 
   const Styles = {
     slide: {
