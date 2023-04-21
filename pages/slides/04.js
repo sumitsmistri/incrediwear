@@ -153,9 +153,9 @@ function Slide_02() {
                   </svg>
                   You may control the presentation
                   <br />
-                  by clicking on the icon at the top
+                  &nbsp;by clicking on the icon at the top
                   <br />
-                  right of your screen
+                  &nbsp;right of your screen
                 </div>
               </span>
             </motion.div>
