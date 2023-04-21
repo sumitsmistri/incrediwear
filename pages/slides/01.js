@@ -15,6 +15,12 @@ function Slide_01() {
   const baseFontSize = 14.37;
   const router = useRouter();
 
+  const audio = useAudio("/slides/backgroundmusic_2.mp3", {
+    volume: 0.2,
+    playbackRate: 1,
+    loop: true,
+  });
+
   const [slideData, setslideData] = useState({
     bg: "/slides/01/bg.jpg",
     title_1: "<em>Welcome</em> to Incrediwear",
@@ -85,6 +91,7 @@ function Slide_01() {
       type: "toggleBgMusic",
       payload: false,
     });
+    audio.play();
     router.push("/slides/02");
   };
 
