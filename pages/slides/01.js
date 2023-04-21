@@ -20,6 +20,13 @@ function Slide_01() {
     title_1: "<em>Welcome</em> to Incrediwear",
   });
 
+  const audio = useAudio("/slides/backgroundmusic_2.mp3", {
+    volume: 0.2,
+    playbackRate: 1,
+    loop: true,
+  });
+
+
   useEffect(() => {
     dispatch({
       type: "sliderImages",
