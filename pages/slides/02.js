@@ -18,13 +18,6 @@ function Slide_02() {
   const [formemail, setformemail] = useState(email);
   const [iswfhpr, setiswfhpr] = useState(false);
 
-  const { stopBgMusic } = useSelector((state) => state.incrediwear.stopBgMusic);
-
-  const audio_bg = useAudio("/slides/backgroundmusic_2.mp3", {
-    volume: 0.2,
-    playbackRate: 1,
-    loop: true,
-  });
 
   const audio = useAudio("/slides/02/s02.mp3", {
     volume: 1,
@@ -42,11 +35,6 @@ function Slide_02() {
   };
 
   useEffect(() => {
-    if (stopBgMusic) {
-      audio_bg.pause();
-    } else {
-      audio_bg.play();
-    }
     setTimeout(() => {
       audio.play();
     }, 1000);
