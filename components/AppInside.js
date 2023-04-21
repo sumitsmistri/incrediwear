@@ -15,13 +15,13 @@ export default function AppInside({ Component, pageProps }) {
 
   //useEffect(() => {}, [stopBgMusic]);
 
-  useEffect(() => {
-    /* if (stopBgMusic) {
+  /* useEffect(() => {
+    if (stopBgMusic) {
       audio.pause();
     } else {
       audio.play();
-    } */
-  });
+    }
+  }); */
 
   return (
     <AnimatePresence>
