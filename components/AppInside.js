@@ -5,7 +5,7 @@ import useAudio from "../shared/useAudio";
 import store from "../store/store";
 
 export default function AppInside({ Component, pageProps }) {
-  const { stopBgMusic } = useSelector((state) => state.incrediwear);
+  const { stopBgMusic } = useSelector((state) => state.incrediwear.stopBgMusic);
   // console.log(state);
   const audio = useAudio("/slides/backgroundmusic_2.mp3", {
     volume: 0.2,
@@ -13,9 +13,9 @@ export default function AppInside({ Component, pageProps }) {
     loop: true,
   });
 
-  /* useEffect(() => {}, [stopBgMusic]);
+  //useEffect(() => {}, [stopBgMusic]);
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (stopBgMusic) {
       audio.pause();
     } else {
