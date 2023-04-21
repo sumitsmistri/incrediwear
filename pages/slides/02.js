@@ -18,8 +18,7 @@ function Slide_02() {
   const [formemail, setformemail] = useState(email);
   const [iswfhpr, setiswfhpr] = useState(false);
 
-
-  const audio1 = useAudio("/slides/02/s02.mp3", {
+  const audio = useAudio("/slides/02/s02.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
@@ -36,16 +35,16 @@ function Slide_02() {
 
   useEffect(() => {
     setTimeout(() => {
-      audio1.play();
+      audio.play();
     }, 1000);
     setDim();
     window.addEventListener("resize", function (e) {
       setDim();
     });
     return () => {
-      audio1.pause();
+      audio.pause();
     };
-  }, [audio1]);
+  }, []);
 
   const Styles = {
     slide: {
