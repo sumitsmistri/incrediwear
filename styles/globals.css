@@ -1829,7 +1829,7 @@ a.submitQustionLink:hover{
     margin: 2rem 0rem 0rem !important;
   }
   .page_2 .size-m {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   } 
 
   /* slide 3 */
@@ -3155,4 +3155,40 @@ a.submitQustionLink:hover{
     grid-gap: 1rem;
   }
 
+}
+
+/* 2nd slide inputs */
+.oneinput {
+  background: #ffffff;
+  margin-bottom: 10px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+.oneinput label {
+  margin-right: 10px;
+}
+.oneinput input {
+  -webkit-appearance: none;
+  border: none;
+  padding: 0;
+  font-family: Montserrat;
+  font-size: 2rem;
+  outline: none;
+  background: none;
+}
+
+@media (max-width: 575px) {
+  .oneinput {
+    border: 1px solid;
+    border-radius: 15px;
+    padding: 11px;
+    overflow: hidden;
+  }
+  .oneinput label[for="name"] {
+    min-width: 11rem;
+  }
+  .oneinput input {
+    font-size: 1.6rem;
+  }
 }

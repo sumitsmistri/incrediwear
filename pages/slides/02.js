@@ -140,7 +140,7 @@ function Slide_02() {
               transition={{ delay: 1, duration: 0.5 }}
             >
               <div className="fullWidth">
-                <div className="inputGrid">
+                {/* <div className="inputGrid">
                   <div className="label input">
                     <label for="name" className="">
                       <span className="text size-m color-standard">
@@ -165,6 +165,38 @@ function Slide_02() {
                     </label>
                   </div>
                   <div className="field input">
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="My email adress"
+                      autocomplete="off"
+                      className=""
+                      value={formemail}
+                      onChange={(e) => setformemail(e.target.value)}
+                    />
+                  </div>
+                </div> */}
+                <div className="inputfieldwarapper">
+                  <div className="oneinput">
+                    <label for="name" className="">
+                      <span className="text size-m color-standard">
+                        Your name:
+                      </span>
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="My first name"
+                      autocomplete="off"
+                      className=""
+                      value={formname}
+                      onChange={(e) => setformname(e.target.value)}
+                    />
+                  </div>
+                  <div className="oneinput">
+                    <label for="email" className="">
+                      <span className="text size-m color-standard">Email:</span>
+                    </label>
                     <input
                       id="email"
                       type="email"
