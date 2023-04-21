@@ -21,7 +21,7 @@ export default function AppInside({ Component, pageProps }) {
     } else {
       audio.play();
     }
-  });
+  }, [audio]);
 
   return (
     <AnimatePresence>
