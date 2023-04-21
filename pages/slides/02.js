@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
@@ -18,14 +18,11 @@ function Slide_02() {
   const [formemail, setformemail] = useState(email);
   const [iswfhpr, setiswfhpr] = useState(false);
 
-  const { stopBgMusic } = useSelector((state) => state.incrediwear.stopBgMusic);
-  /* const audio = useAudio("/slides/02/s02.mp3", {
+  const audio = useAudio("/slides/02/s02.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
-  }); */
-
-  const audio = useRef(new Audio('/slides/02/s02.mp3'))
+  });
 
   const [slideData, setslideData] = useState({
     bg: bgs[1],
@@ -37,17 +34,15 @@ function Slide_02() {
   };
 
   useEffect(() => {
-    audio.current.playbackRate = 1
-    audio.current.volume = 1
     setTimeout(() => {
-      audio.current.play();
+      audio.play();
     }, 1000);
     setDim();
     window.addEventListener("resize", function (e) {
       setDim();
     });
     return () => {
-      audio.current.pause();
+      audio.pause();
     };
   }, []);
 
