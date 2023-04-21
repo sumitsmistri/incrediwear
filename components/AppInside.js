@@ -13,7 +13,7 @@ export default function AppInside({ Component, pageProps }) {
     loop: true,
   });
 
-  //useEffect(() => {}, [stopBgMusic]);
+  /* useEffect(() => {}, [stopBgMusic]);
 
   useEffect(() => {
     if (stopBgMusic) {
@@ -21,7 +21,7 @@ export default function AppInside({ Component, pageProps }) {
     } else {
       audio.play();
     }
-  }, [stopBgMusic]);
+  }); */
 
   return (
     <AnimatePresence>
