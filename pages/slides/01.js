@@ -20,6 +20,7 @@ function Slide_01() {
     title_1: "<em>Welcome</em> to Incrediwear",
   });
 
+  const { stopBgMusic } = useSelector((state) => state.incrediwear.stopBgMusic);
   const audio = useAudio("/slides/backgroundmusic_2.mp3", {
     volume: 0.2,
     playbackRate: 1,
@@ -87,10 +88,15 @@ function Slide_01() {
   };
 
   const handleClick = () => {
-    audio.play();
+    //audio.play();
+    if (stopBgMusic) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
     dispatch({
       type: "toggleBgMusic",
-      payload: false,
+      payload: true,
     });
     router.push("/slides/02");
   };
