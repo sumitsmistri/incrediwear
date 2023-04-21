@@ -19,7 +19,7 @@ function Slide_02() {
   const [iswfhpr, setiswfhpr] = useState(false);
 
 
-  const audio = useAudio("/slides/02/s02.mp3", {
+  const audio1 = useAudio("/slides/02/s02.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
@@ -36,15 +36,15 @@ function Slide_02() {
 
   useEffect(() => {
     setTimeout(() => {
-      audio.play();
+      audio1.play();
     }, 1000);
     setDim();
     window.addEventListener("resize", function (e) {
       setDim();
     });
-    return () => {
+    /* return () => {
       audio.pause();
-    };
+    }; */
   }, []);
 
   const Styles = {
