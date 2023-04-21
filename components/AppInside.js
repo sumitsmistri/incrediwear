@@ -19,7 +19,7 @@ export default function AppInside({ Component, pageProps }) {
     if (stopBgMusic) {
       audio.pause();
     } else {
-      //audio.play();
+      audio.play();
     }
   });
 

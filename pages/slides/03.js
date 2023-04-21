@@ -36,9 +36,9 @@ function Slide_02() {
     setTimeout(() => {
       router.push("/slides/04");
     }, 5000);
-    return () => {
+    /* return () => {
       audio.pause();
-    };
+    }; */
   }, []);
 
   const Styles = {
