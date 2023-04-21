@@ -42,9 +42,9 @@ function Slide_02() {
     window.addEventListener("resize", function (e) {
       setDim();
     });
-    /* return () => {
-      audio.pause();
-    }; */
+    return () => {
+      audio1.pause();
+    };
   }, [audio1]);
 
   const Styles = {
