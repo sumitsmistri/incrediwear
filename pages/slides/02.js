@@ -142,7 +142,7 @@ function Slide_02() {
               <div className="fullWidth">
                 {/* <div className="inputGrid">
                   <div className="label input">
-                    <label for="name" className="">
+                    <label htmlFor="name" className="">
                       <span className="text size-m color-standard">
                         Your name:
                       </span>
@@ -153,14 +153,14 @@ function Slide_02() {
                       id="name"
                       type="text"
                       placeholder="My first name"
-                      autocomplete="off"
+                      autoComplete="off"
                       className=""
                       value={formname}
                       onChange={(e) => setformname(e.target.value)}
                     />
                   </div>
                   <div className="label input">
-                    <label for="email" className="">
+                    <label htmlFor="email" className="">
                       <span className="text size-m color-standard">Email:</span>
                     </label>
                   </div>
@@ -169,7 +169,7 @@ function Slide_02() {
                       id="email"
                       type="email"
                       placeholder="My email adress"
-                      autocomplete="off"
+                      autoComplete="off"
                       className=""
                       value={formemail}
                       onChange={(e) => setformemail(e.target.value)}
@@ -178,7 +178,7 @@ function Slide_02() {
                 </div> */}
                 <div className="inputfieldwarapper">
                   <div className="oneinput">
-                    <label for="name" className="">
+                    <label htmlFor="name" className="">
                       <span className="text size-m color-standard">
                         Your name:
                       </span>
@@ -187,21 +187,21 @@ function Slide_02() {
                       id="name"
                       type="text"
                       placeholder="My first name"
-                      autocomplete="off"
+                      autoComplete="off"
                       className=""
                       value={formname}
                       onChange={(e) => setformname(e.target.value)}
                     />
                   </div>
                   <div className="oneinput">
-                    <label for="email" className="">
+                    <label htmlFor="email" className="">
                       <span className="text size-m color-standard">Email:</span>
                     </label>
                     <input
                       id="email"
                       type="email"
                       placeholder="My email adress"
-                      autocomplete="off"
+                      autoComplete="off"
                       className=""
                       value={formemail}
                       onChange={(e) => setformemail(e.target.value)}

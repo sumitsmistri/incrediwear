@@ -86,12 +86,11 @@ function Slide_01() {
   };
 
   const handleClick = () => {
-    //audio.play();
-    dispatch({
+    audio.play();
+    /* dispatch({
       type: "toggleBgMusic",
       payload: false,
-    });
-    audio.play();
+    }); */
     router.push("/slides/02");
   };
 
