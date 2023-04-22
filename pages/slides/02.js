@@ -21,7 +21,7 @@ function Slide_02() {
 
   /* const hiddenbutton = useRef(null); */
 
-  const audio = useAudio("/slides/02/s02.mp3", {
+  const audio2 = useAudio("/slides/02/s02.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
@@ -43,7 +43,7 @@ function Slide_02() {
     //audio.pause();
     
     setTimeout( () => {
-      audio.play();
+      audio2.play();
     }, 900);
 
     setDim();
@@ -51,7 +51,7 @@ function Slide_02() {
       setDim();
     });
     return () => {
-      audio.pause();
+      audio2.pause();
     };
   }, []);
 
