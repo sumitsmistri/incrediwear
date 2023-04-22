@@ -36,6 +36,8 @@ function Slide_02() {
     setiswfhpr(!iswfhpr);
   };
 
+  let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+
   useEffect(() => {
 
     //audio.play();
@@ -46,10 +48,7 @@ function Slide_02() {
       audio.play();
     }, 1000); */
 
-    setTimeout( () => {
-      const audio2 = new Audio('/slides/02/s02.mp3');
-      audio2.play();
-    }, 1000);    
+    document.getElementById('button_page_2').addEventListener(touchEvent, audio.play());
 
     setDim();
     window.addEventListener("resize", function (e) {
@@ -300,15 +299,16 @@ function Slide_02() {
               </div>
             </div>
           </div>
-          {/* <button className="hidden_btn" ref={hiddenbutton}
-          onClick={async (e) => {
+          <button className="hidden_btn" /* ref={hiddenbutton} */
+          /* onClick={async (e) => {
             e.stopPropagation();
             await new Promise((r) => setTimeout(r, 1000));
             await audio?.play();
-          }}
+          }} */
+          id="button_page_2"
           >
             TEST
-          </button> */}
+          </button>
         </motion.main>
       ) : (
         <Loader />

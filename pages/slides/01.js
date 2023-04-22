@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
