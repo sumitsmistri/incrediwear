@@ -19,7 +19,7 @@ function Slide_02() {
   const [formemail, setformemail] = useState(email);
   const [iswfhpr, setiswfhpr] = useState(false);
 
-  /* const hiddenbutton = useRef(null); */
+  const hiddenbutton = useRef(null);
 
   const audio = useAudio("/slides/02/s02.mp3", {
     volume: 1,
@@ -36,19 +36,15 @@ function Slide_02() {
     setiswfhpr(!iswfhpr);
   };
 
-  let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-
   useEffect(() => {
 
     //audio.play();
-    //hiddenbutton.current.click();
+    hiddenbutton.current.click();
     //audio.pause();
     
     /* setTimeout( () => {
       audio.play();
     }, 1000); */
-
-    document.getElementById('button_page_2').addEventListener("touchstart", audio.play());
 
     setDim();
     window.addEventListener("resize", function (e) {
@@ -299,13 +295,13 @@ function Slide_02() {
               </div>
             </div>
           </div>
-          <button className="hidden_btn" /* ref={hiddenbutton} */
-          /* onClick={async (e) => {
+          <button className="hidden_btn" ref={hiddenbutton}
+          onClick={async (e) => {
             e.stopPropagation();
             await new Promise((r) => setTimeout(r, 1000));
             await audio?.play();
-          }} */
-          id="button_page_2"
+          }}
+          style={{cursor: "pointer"}}
           >
             TEST
           </button>
