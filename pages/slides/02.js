@@ -37,17 +37,18 @@ function Slide_02() {
   };
 
   useEffect(() => {
-    setTimeout( async () => {
+    audio.play();
+    /* setTimeout( async () => {
       await audio.play();
       //await hiddenbutton.current.click();
-    }, 950);
+    }, 950); */
     setDim();
     window.addEventListener("resize", function (e) {
       setDim();
     });
-    /* return () => {
+    return () => {
       audio.pause();
-    }; */
+    };
   }, []);
 
   const Styles = {
@@ -290,14 +291,12 @@ function Slide_02() {
               </div>
             </div>
           </div>
-          <button className="hidden_btn" ref={hiddenbutton}  onClick={(e) => {
+          {/* <button className="hidden_btn" ref={hiddenbutton}  onClick={(e) => {
             e.preventDefault()
-            /* alert("clicked") */
             audio.play()
-           /*  alert("clicked") */
           }}>
             TEST
-          </button>
+          </button> */}
         </motion.main>
       ) : (
         <Loader />
