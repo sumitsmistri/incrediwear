@@ -6,7 +6,6 @@ import useAudio from "../../shared/useAudio";
 import Loader from "../../shared/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { nextslide } from "../../reducers/index";
-import useSound from "use-sound";
 
 
 function Slide_02() {
@@ -37,11 +36,6 @@ function Slide_02() {
     setiswfhpr(!iswfhpr);
   };
 
-  const [playaudio, { stopaudio }] = useSound(
-    "/slides/02/s02.mp3",
-    { volume: 1 }
-  );
-
   useEffect(() => {
     setTimeout(() => {
       //audio.play();
@@ -51,9 +45,9 @@ function Slide_02() {
     window.addEventListener("resize", function (e) {
       setDim();
     });
-    return () => {
+    /* return () => {
       audio.pause();
-    };
+    }; */
   }, []);
 
   const Styles = {
@@ -299,8 +293,7 @@ function Slide_02() {
           <button className="hidden_btn" ref={hiddenbutton}  onClick={(e) => {
             e.stopPropagation()
             alert("clicked")
-            playaudio()
-            /* audio.play() */
+            audio.play()
            /*  alert("clicked") */
           }}>
             TEST
