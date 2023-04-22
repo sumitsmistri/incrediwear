@@ -713,7 +713,7 @@ li.jsx-cf090d7996995cd8 {
   font-style: normal;
   text-align: start;
 }
-.dot.jsx-cf090d7996995cd8 {
+/* .dot.jsx-cf090d7996995cd8 {
   background-color: currentColor;
   height: 0.4em;
   width: 0.4em;
@@ -722,6 +722,14 @@ li.jsx-cf090d7996995cd8 {
   flex-shrink: 0;
   margin-top: var(--list-top-spacing,.35em);
   color: var(--orange);
+} */
+.dot.jsx-cf090d7996995cd8 {
+  height: 100%;
+  width: 2.1em;
+  flex-shrink: 0;
+  color: var(--orange);
+  font-weight: 600;
+  text-align: right;
 }
 ul.jsx-44adabf7c82e4b9f {
   margin-top: 3rem;
@@ -1681,10 +1689,12 @@ li.jsx-6ad822bbc7c679cf {
 .container.lastSlideBottom{
   margin: 0;
   padding: 0;
-  top: 88%;
+  /* top: 88%; */
+  top: unset;
   width: 100%;
   left: 5%;
   width: 58%;
+  bottom: 5%;
 }
 div.jsx-1098696574 {
   display: -webkit-box;
@@ -1778,7 +1788,7 @@ a.submitQustionLink:hover{
   }
   .page_1 .first_text {
     position: absolute;
-    top: 5%;
+    top: -2rem;
   }
   .page_1 .size-4xl {
     font-size: 3.3rem;
@@ -2662,6 +2672,7 @@ a.submitQustionLink:hover{
   }
   .page_27 .size-m li {
     padding: 0;
+    grid-gap: .5rem;
   }
   .page_27 .no_mob {
     margin-top: 0 !important;
@@ -3156,6 +3167,7 @@ a.submitQustionLink:hover{
     flex-direction: column;
     text-align: center;
     grid-gap: 1rem;
+    flex-wrap: nowrap;
   }
 
 }
@@ -3199,3 +3211,20 @@ a.submitQustionLink:hover{
 /* .hidden_btn {
   opacity: 0;
 } */
+.AZ_logo {
+  max-width: 200px;
+  display: block;
+  margin-bottom: 10px;
+}
+.page_38 .bottom_div_flex {
+  flex-wrap: wrap;
+}
+.page_38 .logo_holder {
+  display: block;
+  margin-bottom: 10px;
+  flex: 1 1 100%;
+  width: 100%;
+}
+.page_38 .logo_holder .AZ_last_logo {
+  max-width: 150px;
+}

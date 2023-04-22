@@ -147,13 +147,21 @@ function Slide_39() {
             </motion.div>
             <div style={Styles.blankMargin}>&nbsp;</div>
           </div>
+          
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 2, duration: 0.5 }}
             className="jsx-977875503 container bg-none isSlideContentWrapper bottomContainer absolute lastSlideBottom"
           >
-            <div className="jsx-1098696574 flex">
+            <div className="jsx-1098696574 flex bottom_div_flex">
+              <div className="logo_holder">
+                <img
+                  src="/slides/01/AZ_logo.png"
+                  alt="AZ MediQuip logo"
+                  className="AZ_last_logo"
+                />
+              </div>
               <div className="">
                 <span className="jsx-2589450523 text size-s color-standard">
                   Share this interactive presentation with others

@@ -116,6 +116,11 @@ function Slide_01() {
               transition={{ delay: 0.5, duration: 0.5 }}
               className={`first_text`}
             >
+              <img
+                src="/slides/01/AZ_logo.png"
+                alt="AZ MediQuip logo"
+                className="AZ_logo"
+              />
               <span
                 className="text size-4xl color-standard"
                 dangerouslySetInnerHTML={{ __html: slideData.title_1 }}

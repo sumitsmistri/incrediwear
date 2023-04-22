@@ -126,7 +126,7 @@ function Slide_31() {
               >
                 <div style={Styles.blankMargin}></div>
                 <em>Your customers</em> can train harder, train longer,
-                <em>perform</em>
+                <em> perform</em>
                 <br />
                 better, and feel <em>amazing!</em>
               </motion.span>
