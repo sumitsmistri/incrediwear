@@ -1,29 +1,31 @@
-import { useEffect, useState } from "react";
+import { Howl } from "howler";
+import { useEffect, useRef, useState } from "react";
+import useInteraction from "./userInteraction";
 
-export const useAudioCustom = (
-  src = "",
-  { volume = 1, playbackRate = 1, loop = false }
-) => {
+
+export default function useCustomAudio(options) {
   const [audio, setAudio] = useState();
-  useEffect(() => {
-    if (!!audio) audio.volume = volume;
-  }, [audio, volume]);
+
+  const interacted = useInteraction();
 
   useEffect(() => {
-    if (!!audio) audio.playbackRate = playbackRate;
-  }, [audio, playbackRate]);
-
-  useEffect(() => {
-    if (!!audio) audio.loop = loop;
-  }, [audio]);
-  useEffect(() => {
-    if (src !== "") {
-      const _audio = new Audio(src);
-      _audio.load();
-      _audio.addEventListener("canplaythrough", () => {
-        setAudio(_audio);
-      });
+    async function createAudoContext() {
+      const { Howl } = await import('howler');
+      setAudio(new Howl(options));
     }
-  }, [src]);
-  return audio;
-};
+
+    if (interacted) {
+      createAudoContext();
+    }
+
+    return () => {
+      if (audio) {
+        audio.unload();
+      }
+    };
+  }, [options]);
+
+  const ready = Boolean(interacted && audio);
+
+  return { audio, ready };
+}

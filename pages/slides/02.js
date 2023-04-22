@@ -6,7 +6,6 @@ import useAudio from "../../shared/useAudio";
 import Loader from "../../shared/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { nextslide } from "../../reducers/index";
-import { useAudioCustom } from "../../shared/useCustomAudio";
 
 
 function Slide_02() {
@@ -20,17 +19,12 @@ function Slide_02() {
   const [formemail, setformemail] = useState(email);
   const [iswfhpr, setiswfhpr] = useState(false);
 
-  const hiddenbutton = useRef(null);
+  /* const hiddenbutton = useRef(null); */
 
   const audio = useAudio("/slides/02/s02.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
-  });
-  const audio2 = useAudioCustom("/slides/02/s02.mp3", {
-    volume: 1,
-    playbackRate: 1,
-    loop: false
   });
 
   const [slideData, setslideData] = useState({
@@ -42,28 +36,23 @@ function Slide_02() {
     setiswfhpr(!iswfhpr);
   };
 
-  /* const slideaudioplay = () => {
-    audio.play();
-  }; */
-
-  /* if(audio) {
-    audio.play();
-  } */
-
   useEffect(() => {
+
     //audio.play();
-    hiddenbutton.current.click();
-    /* setTimeout( async () => {
-      await audio.play();
-      //await hiddenbutton.current.click();
-    }, 950); */
+    //hiddenbutton.current.click();
+    audio.pause();
+    
+    setTimeout( () => {
+      audio.play();
+    }, 900);
+
     setDim();
     window.addEventListener("resize", function (e) {
       setDim();
     });
-    /* return () => {
+    return () => {
       audio.pause();
-    }; */
+    };
   }, []);
 
   const Styles = {
@@ -306,7 +295,7 @@ function Slide_02() {
               </div>
             </div>
           </div>
-          <button className="hidden_btn" ref={hiddenbutton}
+          {/* <button className="hidden_btn" ref={hiddenbutton}
           onClick={async (e) => {
             e.stopPropagation();
             await new Promise((r) => setTimeout(r, 1000));
@@ -314,7 +303,7 @@ function Slide_02() {
           }}
           >
             TEST
-          </button>
+          </button> */}
         </motion.main>
       ) : (
         <Loader />
