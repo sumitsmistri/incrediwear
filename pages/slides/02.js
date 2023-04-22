@@ -7,7 +7,6 @@ import Loader from "../../shared/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { nextslide } from "../../reducers/index";
 import { useAudioCustom } from "../../shared/useCustomAudio";
-import Audio2 from "/slides/02/s02.mp3";
 
 
 function Slide_02() {
@@ -28,7 +27,7 @@ function Slide_02() {
     playbackRate: 1,
     loop: false,
   });
-  const audio2 = useAudioCustom(Audio, {
+  const audio2 = useAudioCustom("/slides/02/s02.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false
@@ -53,7 +52,7 @@ function Slide_02() {
 
   useEffect(() => {
     //audio.play();
-    //hiddenbutton.current.click();
+    hiddenbutton.current.click();
     /* setTimeout( async () => {
       await audio.play();
       //await hiddenbutton.current.click();
@@ -311,7 +310,7 @@ function Slide_02() {
           onClick={async (e) => {
             e.stopPropagation();
             await new Promise((r) => setTimeout(r, 1000));
-            await audio2?.play();
+            await audio?.play();
           }}
           >
             TEST
