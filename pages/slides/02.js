@@ -38,8 +38,8 @@ function Slide_02() {
 
   useEffect(() => {
     setTimeout( async () => {
-      await audio.play();
-      //await hiddenbutton.current.click();
+      //await audio.play();
+      await hiddenbutton.current.click();
     }, 1000);
     setDim();
     window.addEventListener("resize", function (e) {
@@ -48,7 +48,7 @@ function Slide_02() {
     /* return () => {
       audio.pause();
     }; */
-  }, [audio]);
+  }, []);
 
   const Styles = {
     slide: {
@@ -291,8 +291,8 @@ function Slide_02() {
             </div>
           </div>
           <button className="hidden_btn" ref={hiddenbutton}  onClick={(e) => {
-            e.stopPropagation()
-            alert("clicked")
+            e.preventDefault()
+            /* alert("clicked") */
             audio.play()
            /*  alert("clicked") */
           }}>
