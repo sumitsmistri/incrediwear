@@ -48,7 +48,7 @@ function Slide_02() {
       audio.play();
     }, 1000); */
 
-    document.getElementById('button_page_2').addEventListener(touchEvent, audio.play());
+    document.getElementById('button_page_2').addEventListener(touchstart, audio.play());
 
     setDim();
     window.addEventListener("resize", function (e) {
