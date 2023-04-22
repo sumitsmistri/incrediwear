@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
@@ -6,6 +6,7 @@ import useAudio from "../../shared/useAudio";
 import Loader from "../../shared/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { nextslide } from "../../reducers/index";
+
 
 function Slide_02() {
   const bgs = useSelector((state) => state.incrediwear.bgs);
@@ -17,6 +18,8 @@ function Slide_02() {
   const [formname, setformname] = useState(name);
   const [formemail, setformemail] = useState(email);
   const [iswfhpr, setiswfhpr] = useState(false);
+
+  const hiddenbutton = useRef(null);
 
   const audio = useAudio("/slides/02/s02.mp3", {
     volume: 1,
@@ -35,7 +38,8 @@ function Slide_02() {
 
   useEffect(() => {
     setTimeout(() => {
-      audio.play();
+      //audio.play();
+      hiddenbutton.current?.click();
     }, 1000);
     setDim();
     window.addEventListener("resize", function (e) {
@@ -286,6 +290,9 @@ function Slide_02() {
               </div>
             </div>
           </div>
+          <button className="hidden_btn" ref={hiddenbutton} onClick={() => audio.play()}>
+            TEST
+          </button>
         </motion.main>
       ) : (
         <Loader />

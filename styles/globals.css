@@ -3192,3 +3192,7 @@ a.submitQustionLink:hover{
     font-size: 1.6rem;
   }
 }
+
+.hidden_btn {
+  opacity: 0;
+}
