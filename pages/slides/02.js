@@ -296,10 +296,10 @@ function Slide_02() {
             </div>
           </div>
           <button className="hidden_btn" ref={hiddenbutton}
-          onClick={async (e) => {
+          onClick={(e) => {
             e.stopPropagation();
-            await new Promise((r) => setTimeout(r, 1000));
-            await audio?.play();
+            audio.pause();
+            audio.play();
           }}
           style={{cursor: "pointer"}}
           >
