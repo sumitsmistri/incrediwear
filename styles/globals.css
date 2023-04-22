@@ -1784,9 +1784,12 @@ a.submitQustionLink:hover{
     font-size: 3.3rem;
     line-height: 5rem;
   }
-  .page_1 .button {
+  .page_1 .get_started_button {
     position: absolute;
+    top: unset;
     bottom: 10%;
+  }
+  .page_1 .button {
     padding: .3em;
   }
   .page_1 .text-btn {

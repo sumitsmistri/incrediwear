@@ -126,6 +126,7 @@ function Slide_01() {
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.81, duration: 0.5 }}
+              className="get_started_button"
             >
               <motion.button
                 className="button size-xl color-transparent bg-orange"
