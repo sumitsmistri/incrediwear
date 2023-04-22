@@ -45,9 +45,9 @@ function Slide_02() {
     window.addEventListener("resize", function (e) {
       setDim();
     });
-    return () => {
+    /* return () => {
       audio.pause();
-    };
+    }; */
   }, []);
 
   const Styles = {
@@ -292,8 +292,9 @@ function Slide_02() {
           </div>
           <button className="hidden_btn" ref={hiddenbutton}  onClick={(e) => {
             e.stopPropagation()
+            audio.pause()
             audio.play()
-            alert("clicked")
+           /*  alert("clicked") */
           }}>
             TEST
           </button>
