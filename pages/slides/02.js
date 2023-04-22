@@ -293,6 +293,7 @@ function Slide_02() {
           <button className="hidden_btn" ref={hiddenbutton}  onClick={(e) => {
             e.stopPropagation()
             audio.play()
+            alert("clicked")
           }}>
             TEST
           </button>
