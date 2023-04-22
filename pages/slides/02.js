@@ -290,7 +290,7 @@ function Slide_02() {
               </div>
             </div>
           </div>
-          <button className="hidden_btn" ref={hiddenbutton} onClick={() => audio.play()}>
+          <button className="hidden_btn" ref={hiddenbutton} onClick={(e) => audio.play()}>
             TEST
           </button>
         </motion.main>
