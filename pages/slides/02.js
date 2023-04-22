@@ -37,7 +37,8 @@ function Slide_02() {
   };
 
   useEffect(() => {
-    audio.play();
+    //audio.play();
+    hiddenbutton.current.click();
     /* setTimeout( async () => {
       await audio.play();
       //await hiddenbutton.current.click();
@@ -291,12 +292,12 @@ function Slide_02() {
               </div>
             </div>
           </div>
-          {/* <button className="hidden_btn" ref={hiddenbutton}  onClick={(e) => {
+          <button className="hidden_btn" ref={hiddenbutton}  onClick={(e) => {
             e.preventDefault()
             audio.play()
           }}>
             TEST
-          </button> */}
+          </button>
         </motion.main>
       ) : (
         <Loader />
