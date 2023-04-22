@@ -38,7 +38,7 @@ function Slide_02() {
 
   useEffect(() => {
     setTimeout(() => {
-      //audio.play();
+      audio.play();
       hiddenbutton.current?.click();
     }, 1000);
     setDim();

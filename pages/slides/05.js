@@ -38,7 +38,7 @@ function Slide_02() {
     setTimeout(() => {
       audio.play();
     }, 1000);
-    console.log("Sdf");
+    //console.log("Sdf");
     /* setTimeout(() => {
       router.push("/slides/06");
     }, 35000); */

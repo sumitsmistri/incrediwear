@@ -88,12 +88,7 @@ function Slide_01() {
   };
 
   const handleClick = () => {
-    //audio.play();
-    if (stopBgMusic) {
-      audio.pause();
-    } else {
-      audio.play();
-    }
+    audio.play();
     dispatch({
       type: "toggleBgMusic",
       payload: false,
