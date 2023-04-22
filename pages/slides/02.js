@@ -6,6 +6,8 @@ import useAudio from "../../shared/useAudio";
 import Loader from "../../shared/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { nextslide } from "../../reducers/index";
+import { useAudioCustom } from "../../shared/useCustomAudio";
+import Audio2 from "/slides/02/s02.mp3";
 
 
 function Slide_02() {
@@ -26,6 +28,11 @@ function Slide_02() {
     playbackRate: 1,
     loop: false,
   });
+  const audio2 = useAudioCustom(Audio, {
+    volume: 1,
+    playbackRate: 1,
+    loop: false
+  });
 
   const [slideData, setslideData] = useState({
     bg: bgs[1],
@@ -36,20 +43,13 @@ function Slide_02() {
     setiswfhpr(!iswfhpr);
   };
 
-  const slideaudioplay = () => {
+  /* const slideaudioplay = () => {
     audio.play();
-  };
+  }; */
 
-  const soundEffect = new Audio();
-
-soundEffect.autoplay = true;
-
-// onClick of first interaction on page before I need the sounds
-// (This is a tiny MP3 file that is silent and extremely short - retrieved from https://bigsoundbank.com and then modified)
-soundEffect.src = "data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
-
-// later on when you actually want to play a sound at any point without user interaction
-soundEffect.src = '/slides/02/s02.mp3';
+  /* if(audio) {
+    audio.play();
+  } */
 
   useEffect(() => {
     //audio.play();
@@ -62,9 +62,9 @@ soundEffect.src = '/slides/02/s02.mp3';
     window.addEventListener("resize", function (e) {
       setDim();
     });
-    return () => {
+    /* return () => {
       audio.pause();
-    };
+    }; */
   }, []);
 
   const Styles = {
@@ -308,7 +308,11 @@ soundEffect.src = '/slides/02/s02.mp3';
             </div>
           </div>
           <button className="hidden_btn" ref={hiddenbutton}
-          onClick={() => slideaudioplay()}
+          onClick={async (e) => {
+            e.stopPropagation();
+            await new Promise((r) => setTimeout(r, 1000));
+            await audio2?.play();
+          }}
           >
             TEST
           </button>
