@@ -36,9 +36,13 @@ function Slide_02() {
     setiswfhpr(!iswfhpr);
   };
 
+  const slideaudioplay = () => {
+    audio.play();
+  };
+
   useEffect(() => {
     //audio.play();
-    hiddenbutton.current.click();
+    //hiddenbutton.current.click();
     /* setTimeout( async () => {
       await audio.play();
       //await hiddenbutton.current.click();
@@ -292,10 +296,9 @@ function Slide_02() {
               </div>
             </div>
           </div>
-          <button className="hidden_btn" ref={hiddenbutton}  onClick={(e) => {
-            e.preventDefault()
-            audio.play()
-          }}>
+          <button className="hidden_btn" ref={hiddenbutton}
+          onClick={() => slideaudioplay()}
+          >
             TEST
           </button>
         </motion.main>

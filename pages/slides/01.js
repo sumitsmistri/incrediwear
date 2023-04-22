@@ -27,6 +27,12 @@ function Slide_01() {
     loop: true,
   });
 
+  const audio2 = useAudio("/slides/02/s02.mp3", {
+    volume: 1,
+    playbackRate: 1,
+    loop: false,
+  });
+
 
   useEffect(() => {
     dispatch({
@@ -88,11 +94,12 @@ function Slide_01() {
   };
 
   const handleClick = () => {
-    //audio.play();
-    dispatch({
+    audio.play();
+    audio2.play();
+    /* dispatch({
       type: "toggleBgMusic",
       payload: false,
-    });
+    }); */
     router.push("/slides/02");
   };
 
