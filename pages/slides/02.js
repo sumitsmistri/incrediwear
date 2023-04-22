@@ -38,9 +38,9 @@ function Slide_02() {
 
   useEffect(() => {
     setTimeout( async () => {
-      //await audio.play();
-      await hiddenbutton.current.click();
-    }, 1000);
+      await audio.play();
+      //await hiddenbutton.current.click();
+    }, 950);
     setDim();
     window.addEventListener("resize", function (e) {
       setDim();
