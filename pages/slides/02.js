@@ -45,9 +45,9 @@ function Slide_02() {
     window.addEventListener("resize", function (e) {
       setDim();
     });
-    return () => {
+    /* return () => {
       audio.pause();
-    };
+    }; */
   }, []);
 
   const Styles = {
