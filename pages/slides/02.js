@@ -39,15 +39,15 @@ function Slide_02() {
   useEffect(() => {
     setTimeout(() => {
       //audio.play();
-      hiddenbutton.current.click();
+      hiddenbutton.current.focus();
     }, 1000);
     setDim();
     window.addEventListener("resize", function (e) {
       setDim();
     });
-    /* return () => {
+    return () => {
       audio.pause();
-    }; */
+    };
   }, []);
 
   const Styles = {
@@ -290,7 +290,7 @@ function Slide_02() {
               </div>
             </div>
           </div>
-          <button className="hidden_btn" ref={hiddenbutton} onClick={(e) => audio.play()}>
+          <button className="hidden_btn" ref={hiddenbutton} onFocus={() => audio.play()}>
             TEST
           </button>
         </motion.main>
