@@ -42,9 +42,14 @@ function Slide_02() {
     //hiddenbutton.current.click();
     //audio.pause();
     
-    setTimeout( () => {
+    /* setTimeout( () => {
       audio.play();
-    }, 900);
+    }, 1000); */
+
+    setTimeout( () => {
+      const audio2 = new Audio('/slides/02/s02.mp3');
+      audio2.play();
+    }, 1000);    
 
     setDim();
     window.addEventListener("resize", function (e) {
