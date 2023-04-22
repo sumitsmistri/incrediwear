@@ -39,7 +39,7 @@ function Slide_02() {
   useEffect(() => {
     setTimeout(() => {
       //audio.play();
-      hiddenbutton.current.focus();
+      hiddenbutton.current.click();
     }, 1000);
     setDim();
     window.addEventListener("resize", function (e) {
@@ -290,7 +290,10 @@ function Slide_02() {
               </div>
             </div>
           </div>
-          <button className="hidden_btn" ref={hiddenbutton} onFocus={() => audio.play()}>
+          <button className="hidden_btn" ref={hiddenbutton}  onClick={(e) => {
+            e.stopPropagation()
+            audio.play()
+          }}>
             TEST
           </button>
         </motion.main>
