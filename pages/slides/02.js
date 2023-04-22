@@ -21,15 +21,11 @@ function Slide_02() {
 
   /* const hiddenbutton = useRef(null); */
 
-  const audio2 = useAudio("/slides/02/s02.mp3", {
+  const audio = useAudio("/slides/02/s02.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
   });
-
-  const [audioStatus, changeAudioStatus] = useState(false);
-  const myRef = useRef();
-
 
   const [slideData, setslideData] = useState({
     bg: bgs[1],
@@ -47,10 +43,7 @@ function Slide_02() {
     //audio.pause();
     
     setTimeout( () => {
-      //audio2.play();
-      myRef.current.play();
-
-    changeAudioStatus(true);
+      audio.play();
     }, 900);
 
     setDim();
@@ -58,7 +51,7 @@ function Slide_02() {
       setDim();
     });
     return () => {
-      audio2.pause();
+      audio.pause();
     };
   }, []);
 
@@ -311,7 +304,6 @@ function Slide_02() {
           >
             TEST
           </button> */}
-          <audio ref={myRef} src="/slides/02/s02.mp3"/>
         </motion.main>
       ) : (
         <Loader />
