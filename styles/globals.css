@@ -1754,7 +1754,7 @@ a.submitQustionLink:hover{
   background: #fff;
 }
 
-@media (max-width: 200px) {
+@media (max-width: 575px) {
 
   .wrapper .overlay {
     width: 100vw;

@@ -40,7 +40,7 @@ function Slide_02() {
 
     //audio.play();
     //hiddenbutton.current.click();
-    audio.pause();
+    //audio.pause();
     
     setTimeout( () => {
       audio.play();
