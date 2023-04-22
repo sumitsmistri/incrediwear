@@ -27,6 +27,10 @@ function Slide_02() {
     loop: false,
   });
 
+  const [audioStatus, changeAudioStatus] = useState(false);
+  const myRef = useRef();
+
+
   const [slideData, setslideData] = useState({
     bg: bgs[1],
     title_1: "Let's get <br/> you <em>started</em>",
@@ -43,7 +47,10 @@ function Slide_02() {
     //audio.pause();
     
     setTimeout( () => {
-      audio2.play();
+      //audio2.play();
+      myRef.current.play();
+
+    changeAudioStatus(true);
     }, 900);
 
     setDim();
@@ -304,6 +311,7 @@ function Slide_02() {
           >
             TEST
           </button> */}
+          <audio ref={myRef} src="/slides/02/s02.mp3"/>
         </motion.main>
       ) : (
         <Loader />
