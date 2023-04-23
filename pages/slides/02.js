@@ -39,12 +39,12 @@ function Slide_02() {
   useEffect(() => {
 
     //audio.play();
-    hiddenbutton.current.click();
+    //hiddenbutton.current.click();
     //audio.pause();
     
-    /* setTimeout( () => {
+    setTimeout( () => {
       audio.play();
-    }, 1000); */
+    }, 1000);
 
     setDim();
     window.addEventListener("resize", function (e) {
