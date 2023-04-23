@@ -15,7 +15,7 @@ function Slide_02() {
   const baseFontSize = 14.37;
   const router = useRouter();
 
-  const audio = useAudio(/* "/slides/05/t05.mp3", */ {
+  const audio = useAudio("/slides/05/t05.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
@@ -36,16 +36,16 @@ function Slide_02() {
     });
 
     setTimeout(() => {
-      audio[4].play();
+      audio.play();
     }, 1000);
     //console.log("Sdf");
     /* setTimeout(() => {
       router.push("/slides/06");
     }, 35000); */
 
-    /* return () => {
+    return () => {
       audio.pause();
-    }; */
+    };
   }, []);
 
   // useEffect(() => {

@@ -9,6 +9,7 @@ import FullScreenIcon from "./FullScreenIcon";
 import { useDispatch, useSelector } from "react-redux";
 
 function Slide_01() {
+  
   const dispatch = useDispatch();
 
   const baseImgSize = { w: 1920, h: 1080 };
@@ -21,11 +22,12 @@ function Slide_01() {
   });
 
   const { stopBgMusic } = useSelector((state) => state.incrediwear.stopBgMusic);
-  const audio = useAudio(/* "/slides/backgroundmusic_2.mp3",  */{
+  const audio = useAudio("/slides/backgroundmusic_2.mp3", {
     volume: 0.2,
     playbackRate: 1,
     loop: true,
   });
+
 
   useEffect(() => {
     dispatch({
@@ -88,13 +90,11 @@ function Slide_01() {
 
   const handleClick = () => {
     //audio.play();
-    audio[0].pause();
     dispatch({
       type: "toggleBgMusic",
       payload: false,
     });
     router.push("/slides/02");
-    audio[1].play();
   };
 
   return (

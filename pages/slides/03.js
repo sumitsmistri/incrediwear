@@ -12,7 +12,7 @@ function Slide_02() {
   const baseFontSize = 14.37;
   const router = useRouter();
   const { name } = useSelector((state) => state.incrediwear.user);
-  const audio = useAudio(/* "/slides/03/s03.mp3", */ {
+  const audio = useAudio("/slides/03/s03.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
@@ -31,15 +31,14 @@ function Slide_02() {
       setDim();
     });
     setTimeout(() => {
-      //audio.play();
-      audio[2].play();
+      audio.play();
     }, 1000);
     setTimeout(() => {
       router.push("/slides/04");
     }, 5000);
-    /* return () => {
+    return () => {
       audio.pause();
-    }; */
+    };
   }, []);
 
   const Styles = {

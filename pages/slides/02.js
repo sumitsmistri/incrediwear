@@ -22,7 +22,7 @@ function Slide_02() {
   const hiddenbutton = useRef(null);
 
 
-  const audio = useAudio(/* "/slides/02/s02.mp3",  */{
+  const audio = useAudio("/slides/02/s02.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
@@ -37,22 +37,25 @@ function Slide_02() {
     setiswfhpr(!iswfhpr);
   };
 
-
   useEffect(() => {
 
+    //audio.play();
     //hiddenbutton.current.click();
+    //audio.pause();
     
-    /* setTimeout( () => {
-      audio[1].play();
-    }, 1000); */
+    setTimeout( () => {
+      audio.play();
+    }, 1000);
 
     setDim();
     window.addEventListener("resize", function (e) {
       setDim();
     });
-    /* return () => {
+
+    return () => {
       audio.pause();
-    }; */
+    };
+    
   }, []);
 
   const Styles = {
@@ -95,7 +98,6 @@ function Slide_02() {
   };
 
   const handleClick = () => {
-      audio[1].pause();
     dispatch({
       type: "setUserDetails",
       payload: {
@@ -105,9 +107,6 @@ function Slide_02() {
       },
     });
     router.push("/slides/03");
-    setTimeout( () => {
-      audio[2].play();
-    }, 1000);
   };
 
   return (
@@ -300,10 +299,10 @@ function Slide_02() {
             </div>
           </div>
           <button className="hidden_btn" ref={hiddenbutton}
-          onClick={(e) => {
+          onClick={async (e) => {
             e.stopPropagation();
-            audio.pause();
-            audio.play();
+            await new Promise((r) => setTimeout(r, 900));
+            await audio?.play();           
           }}
           style={{cursor: "pointer"}}
           >
