@@ -22,7 +22,7 @@ function Slide_02() {
   const hiddenbutton = useRef(null);
 
 
-  const audio = useAudio("/slides/02/s02.mp3", {
+  const audio = useAudio(/* "/slides/02/s02.mp3",  */{
     volume: 1,
     playbackRate: 1,
     loop: false,
@@ -44,20 +44,17 @@ function Slide_02() {
     //hiddenbutton.current.click();
     //audio.pause();
     
-    /* setTimeout( () => {
-      audio.play();
-    }, 1000); */
-    audio?.pause();
-    audio?.load();
-    audio?.play();
+    setTimeout( () => {
+      audio[1].play();
+    }, 1000);
 
     setDim();
     window.addEventListener("resize", function (e) {
       setDim();
     });
-    return () => {
+    /* return () => {
       audio.pause();
-    };
+    }; */
   }, []);
 
   const Styles = {

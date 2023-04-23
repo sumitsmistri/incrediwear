@@ -13,7 +13,7 @@ function Slide_02() {
   const baseFontSize = 14.37;
   const router = useRouter();
 
-  const audio = useAudio("/slides/04/s04.mp3", {
+  const audio = useAudio(/* "/slides/04/s04.mp3" ,*/ {
     volume: 1,
     playbackRate: 1,
     loop: false,
@@ -33,7 +33,7 @@ function Slide_02() {
     });
 
     setTimeout(() => {
-      audio.play();
+      audio[3].play();
     }, 1000);
 
     let t = setTimeout(() => {
@@ -42,7 +42,7 @@ function Slide_02() {
 
     return () => {
       clearTimeout(t);
-      audio.pause();
+      //audio.pause();
     };
   }, []);
 
