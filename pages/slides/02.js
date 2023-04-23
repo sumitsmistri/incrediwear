@@ -19,8 +19,7 @@ function Slide_02() {
   const [formemail, setformemail] = useState(email);
   const [iswfhpr, setiswfhpr] = useState(false);
 
-  const hiddenbutton = useRef(null);
-
+  //const hiddenbutton = useRef(null);
 
   const audio = useAudio("/slides/02/s02.mp3", {
     volume: 1,
@@ -298,7 +297,7 @@ function Slide_02() {
               </div>
             </div>
           </div>
-          <button className="hidden_btn" ref={hiddenbutton}
+          {/* <button className="hidden_btn" ref={hiddenbutton}
           onClick={async (e) => {
             e.stopPropagation();
             await new Promise((r) => setTimeout(r, 900));
@@ -307,7 +306,7 @@ function Slide_02() {
           style={{cursor: "pointer"}}
           >
             TEST
-          </button>
+          </button> */}
         </motion.main>
       ) : (
         <Loader />

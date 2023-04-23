@@ -26,7 +26,7 @@ function Slide_01() {
     volume: 0.2,
     playbackRate: 1,
     loop: true,
-  });
+  }); 
 
 
   useEffect(() => {
@@ -89,7 +89,7 @@ function Slide_01() {
   };
 
   const handleClick = () => {
-    //audio.play();
+    audio.play();
     dispatch({
       type: "toggleBgMusic",
       payload: false,
