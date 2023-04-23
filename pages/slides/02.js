@@ -40,13 +40,11 @@ function Slide_02() {
 
   useEffect(() => {
 
-    //audio.play();
     //hiddenbutton.current.click();
-    //audio.pause();
     
-    setTimeout( () => {
+    /* setTimeout( () => {
       audio[1].play();
-    }, 1000);
+    }, 1000); */
 
     setDim();
     window.addEventListener("resize", function (e) {
@@ -97,6 +95,7 @@ function Slide_02() {
   };
 
   const handleClick = () => {
+      audio[1].pause();
     dispatch({
       type: "setUserDetails",
       payload: {
@@ -106,6 +105,9 @@ function Slide_02() {
       },
     });
     router.push("/slides/03");
+    setTimeout( () => {
+      audio[2].play();
+    }, 1000);
   };
 
   return (

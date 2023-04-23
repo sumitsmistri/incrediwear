@@ -94,7 +94,7 @@ function Slide_01() {
       payload: false,
     });
     router.push("/slides/02");
-    audio[0].play();
+    audio[1].play();
   };
 
   return (
