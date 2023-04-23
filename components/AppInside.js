@@ -7,11 +7,11 @@ import store from "../store/store";
 export default function AppInside({ Component, pageProps }) {
   const { stopBgMusic } = useSelector((state) => state.incrediwear.stopBgMusic);
   // console.log(state);
-  const audio = useAudio("/slides/backgroundmusic_2.mp3", {
+  /* const audio = useAudio("/slides/backgroundmusic_2.mp3", {
     volume: 0.2,
     playbackRate: 1,
     loop: true,
-  });
+  }); */
 
   //useEffect(() => {}, [stopBgMusic]);
 
