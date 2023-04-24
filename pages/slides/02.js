@@ -19,13 +19,36 @@ function Slide_02() {
   const [formemail, setformemail] = useState(email);
   const [iswfhpr, setiswfhpr] = useState(false);
 
-  //const hiddenbutton = useRef(null);
+  /* const hiddenbutton = useRef(null);
+  const audioRef = useRef(null); */
 
   const audio = useAudio("/slides/02/s02.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
   });
+
+  /* const [muted, setMuted] = useState(true);
+
+  useEffect(() => {
+    const playPromise = audioRef.current.play();
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          // Autoplay started!
+        })
+        .catch((error) => {
+          // Autoplay was prevented.
+          // You may want to display a message to the user explaining how to play the audio manually.
+        });
+    }
+  }, []); */
+
+  /* function handleButtonClick() {
+    audioRef.current.src = "/slides/02/s02.mp3";
+    audioRef.current.play();
+    setMuted(false);
+  } */
 
   const [slideData, setslideData] = useState({
     bg: bgs[1],
@@ -40,10 +63,10 @@ function Slide_02() {
 
     //audio.play();
     //hiddenbutton.current.click();
-    //audio.pause();
     
     setTimeout( () => {
       audio.play();
+      //hiddenbutton.current.click();
     }, 1000);
 
     setDim();
@@ -56,6 +79,7 @@ function Slide_02() {
     };
     
   }, []);
+  
 
   const Styles = {
     slide: {
@@ -97,6 +121,21 @@ function Slide_02() {
   };
 
   const handleClick = () => {
+    //saving in spreadsheet on DONE button click
+    const form = {
+      name: formname,
+      email: formemail,
+    }
+    //console.log(form);
+    //sending by fetching API 
+    fetch('/api/sheet', {
+      method: 'POST',
+      body: JSON.stringify(form),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
     dispatch({
       type: "setUserDetails",
       payload: {
@@ -107,6 +146,9 @@ function Slide_02() {
     });
     router.push("/slides/03");
   };
+
+  
+
 
   return (
     <motion.div
@@ -187,38 +229,42 @@ function Slide_02() {
                     />
                   </div>
                 </div> */}
-                <div className="inputfieldwarapper">
-                  <div className="oneinput">
-                    <label htmlFor="name" className="">
-                      <span className="text size-m color-standard">
-                        Your name:
-                      </span>
-                    </label>
-                    <input
-                      id="name"
-                      type="text"
-                      placeholder="My first name"
-                      autoComplete="off"
-                      className=""
-                      value={formname}
-                      onChange={(e) => setformname(e.target.value)}
-                    />
+                <form>
+                  <div className="inputfieldwarapper">
+                    <div className="oneinput">
+                      <label htmlFor="name" className="">
+                        <span className="text size-m color-standard">
+                          Your name:
+                        </span>
+                      </label>
+                      <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="My first name"
+                        autoComplete="off"
+                        className=""
+                        value={formname}
+                        onChange={(e) => setformname(e.target.value)}
+                      />
+                    </div>
+                    <div className="oneinput">
+                      <label htmlFor="email" className="">
+                        <span className="text size-m color-standard">Email:</span>
+                      </label>
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="My email adress"
+                        autoComplete="off"
+                        className=""
+                        value={formemail}
+                        onChange={(e) => setformemail(e.target.value)}
+                      />
+                    </div>
                   </div>
-                  <div className="oneinput">
-                    <label htmlFor="email" className="">
-                      <span className="text size-m color-standard">Email:</span>
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      placeholder="My email adress"
-                      autoComplete="off"
-                      className=""
-                      value={formemail}
-                      onChange={(e) => setformemail(e.target.value)}
-                    />
-                  </div>
-                </div>
+                </form>
               </div>
             </motion.div>
             <div style={Styles.blankMargin} className="no_mobile"></div>
@@ -307,6 +353,14 @@ function Slide_02() {
           >
             TEST
           </button> */}
+        {/* <button onClick={handleButtonClick} className="hidden_btn" ref={hiddenbutton} >Play</button>
+        <audio
+          src="/slides/01/silent.mp3"
+          ref={audioRef}
+          playsInline
+          autoPlay
+          muted={muted}
+        /> */}
         </motion.main>
       ) : (
         <Loader />
