@@ -87,30 +87,6 @@ function Slide_02() {
     }
   };
 
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-  });
-
-  /* const submitForm = (e) => {
-    e.preventDefault();
-
-    setForm({
-      ...form,
-      name: formname,
-      email: formemail,
-    });
-  
-    if (form.name !== '' &&  form.email !== '') {
-      // Data add for append
-      const newRow = {
-        Name: formname,
-        Email: formemail,
-      };
-  
-      appendSpreadsheet(newRow);
-    }
-  }; */
 
   useEffect(() => {
 
@@ -183,6 +159,7 @@ function Slide_02() {
   
       appendSpreadsheet(newRow);
     }
+    
     dispatch({
       type: "setUserDetails",
       payload: {
@@ -191,7 +168,7 @@ function Slide_02() {
         workingForHealthProductRetailer: iswfhpr,
       },
     });
-    //router.push("/slides/03");
+    router.push("/slides/03");
   };
 
 
@@ -274,7 +251,6 @@ function Slide_02() {
                     />
                   </div>
                 </div> */}
-                <form /* onSubmit={submitForm} */>
                   <div className="inputfieldwarapper">
                     <div className="oneinput">
                       <label htmlFor="name" className="">
@@ -309,7 +285,6 @@ function Slide_02() {
                       />
                     </div>
                   </div>
-                </form>
               </div>
             </motion.div>
             <div style={Styles.blankMargin} className="no_mobile"></div>
