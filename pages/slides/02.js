@@ -146,7 +146,7 @@ function Slide_02() {
     });
     setTimeout( () => {      
       router.push("/slides/03");
-    }, 1000);
+    }, 1500);
   };
 
   
