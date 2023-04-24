@@ -144,7 +144,9 @@ function Slide_02() {
         workingForHealthProductRetailer: iswfhpr,
       },
     });
-    router.push("/slides/03");
+    setTimeout( () => {      
+      router.push("/slides/03");
+    }, 1000);
   };
 
   
