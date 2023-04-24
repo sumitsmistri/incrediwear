@@ -128,13 +128,22 @@ function Slide_02() {
     }
     //console.log(form);
     //sending by fetching API 
-    fetch('/api/sheet', {
+
+    const requestOptions = {
       method: 'POST',
-      body: JSON.stringify(form),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+      headers: { 'Content-Type': 'application/json' ,
+                 'Accept': 'application/json'},
+      body: JSON.stringify(form)      
+    };
+
+     fetch('/api/sheet', requestOptions)
+     .then((response)=>{
+        if(response.status==200){alert('succesfull');}       
+        else{throw new Error('Invalid credentials');}
+      })
+      .catch((err)=>{
+        console.log(err);
+      });
 
     dispatch({
       type: "setUserDetails",
