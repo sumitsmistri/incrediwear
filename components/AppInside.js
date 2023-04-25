@@ -30,7 +30,7 @@ export default function AppInside({ Component, pageProps }) {
       src: ['/slides/backgroundmusic_2.mp3'],
       autoplay: true,
       loop: true,
-      volume: 0.3,
+      volume: 0.2,
       context: audioCtx,
     });
     // Play the audio when the user clicks on the first page
