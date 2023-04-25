@@ -6,7 +6,7 @@ import useAudio from "../../shared/useAudio";
 import Loader from "../../shared/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { nextslide } from "../../reducers/index";
-import HiddenButton from "../../components/HiddenButton";
+/* import HiddenButton from "../../components/HiddenButton"; */
 
 
 function Slide_02() {
