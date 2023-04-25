@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Provider, useSelector } from "react-redux";
 import useAudio from "../shared/useAudio";
 import store from "../store/store";
+import { Howl } from "howler";
 
 export default function AppInside({ Component, pageProps }) {
   const { stopBgMusic } = useSelector((state) => state.incrediwear.stopBgMusic);
@@ -22,6 +23,25 @@ export default function AppInside({ Component, pageProps }) {
       audio.play();
     }
   }); */
+
+  useEffect(() => {
+    const audioCtx = new AudioContext();
+    const sound = new Howl({
+      src: ['/slides/backgroundmusic_2.mp3'],
+      autoplay: true,
+      loop: true,
+      volume: 0.3,
+      context: audioCtx,
+    });
+    // Play the audio when the user clicks on the first page
+    document.addEventListener('click', () => {
+      sound.play();
+    });
+
+    // Save the Howl instance and AudioContext to the global object for later use
+    window.audioCtx = audioCtx;
+    window.sound = sound;
+  });
 
   return (
     <AnimatePresence>

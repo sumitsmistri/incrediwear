@@ -7,7 +7,6 @@ import useAudio from "./../../shared/useAudio";
 import Loader from "../../shared/Loader";
 import FullScreenIcon from "./FullScreenIcon";
 import { useDispatch, useSelector } from "react-redux";
-import HiddenButton from "../../components/HiddenButton";
 
 function Slide_01() {
   
@@ -23,11 +22,11 @@ function Slide_01() {
   });
 
   const { stopBgMusic } = useSelector((state) => state.incrediwear.stopBgMusic);
-  /* const audio = useAudio("/slides/backgroundmusic_2.mp3", {
+  const audio = useAudio("/slides/backgroundmusic_2.mp3", {
     volume: 0.2,
     playbackRate: 1,
     loop: true,
-  });  */
+  }); 
 
 
   useEffect(() => {
@@ -89,13 +88,8 @@ function Slide_01() {
     return { w, h, cFS };
   };
 
-  //const buttonRef = useRef(null);
-
   const handleClick = () => {
-    //audio.play();
-    /* if (buttonRef.current) {
-      buttonRef.current.click();
-    } */
+    audio.play();
     dispatch({
       type: "toggleBgMusic",
       payload: false,
@@ -114,7 +108,6 @@ function Slide_01() {
         <meta charSet="utf-8" />
         <title>Incrediwear Interactive - 01</title>
       </Helmet>
-      {/* <HiddenButton ref={buttonRef}/> */}
       {slideData.bg ? (
         <motion.main style={Styles.slide} className={`slidePage slidePage page_1`}>
           <div className={`container bg-none`}>

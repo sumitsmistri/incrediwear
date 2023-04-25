@@ -6,6 +6,7 @@ import useAudio from "../../shared/useAudio";
 import Loader from "../../shared/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { nextslide } from "../../reducers/index";
+import HiddenButton from "../../components/HiddenButton";
 
 
 function Slide_02() {
@@ -22,11 +23,11 @@ function Slide_02() {
   /* const hiddenbutton = useRef(null);
   const audioRef = useRef(null); */
 
-  const audio = useAudio("/slides/02/s02.mp3", {
+  /* const audio = useAudio("/slides/02/s02.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
-  });
+  }); */
 
   /* const [muted, setMuted] = useState(true);
 
@@ -51,7 +52,7 @@ function Slide_02() {
   } */
 
   const [slideData, setslideData] = useState({
-    bg: bgs[1],
+    bg: "/slides/02/bg.jpg",
     title_1: "Let's get <br/> you <em>started</em>",
   });
 
@@ -94,7 +95,7 @@ function Slide_02() {
     //hiddenbutton.current.click();
     
     setTimeout( () => {
-      audio.play();
+      //audio.play();
       //hiddenbutton.current.click();
     }, 1000);
 
@@ -103,11 +104,48 @@ function Slide_02() {
       setDim();
     });
 
-    return () => {
+    /* return () => {
       audio.pause();
-    };
+    }; */
+
+    //const audioElement = new Audio("/slides/02/s02.mp3");
+
+    //audioElement.muted = true;
+    // autoplay on iOS devices
+    //const playPromise = audioElement.play();
+    
+    /* if (playPromise !== undefined) {
+      playPromise.then(() => {}).catch(() => {});
+    } */
     
   }, []);
+
+  useEffect(() => {
+    // Access the Howl instance and AudioContext from the global window object
+    const sound = window.sound;
+    const audioCtx = window.audioCtx;
+
+    // Create a new AudioBufferSourceNode and connect it to the AudioContext
+    const source = audioCtx.createBufferSource();
+    source.connect(audioCtx.destination);
+
+    // Load the audio file and start playing it
+    fetch('/slides/02/s02.mp3')
+      .then((response) => response.arrayBuffer())
+      .then((buffer) => {
+        audioCtx.decodeAudioData(buffer, (decodedData) => {
+          source.buffer = decodedData;
+          source.start(0);
+        });
+      });
+
+    return () => {
+      // Stop the audio when the page unmounts
+      source.stop();
+    };
+  }, []);
+
+  
   
 
   const Styles = {
@@ -183,6 +221,7 @@ function Slide_02() {
         <meta charSet="utf-8" />
         <title>Incrediwear Interactive - 02</title>
       </Helmet>
+      {/* <HiddenButton/> */}
       {slideData.bg ? (
         <motion.main
           initial={{
