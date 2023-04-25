@@ -110,7 +110,7 @@ function Slide_02() {
     source.connect(audioCtx.destination);
 
     // Load the audio file and start playing it
-    fetch('/slides/05/s05.mp3')
+    fetch('/slides/05/t05.mp3')
       .then((response) => response.arrayBuffer())
       .then((buffer) => {
         audioCtx.decodeAudioData(buffer, (decodedData) => {
