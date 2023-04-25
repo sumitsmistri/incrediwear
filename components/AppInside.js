@@ -23,7 +23,7 @@ export default function AppInside({ Component, pageProps }) {
       audio.play();
     }
   }); */
-  //const [onceplayed, setOnceplayed] = useState(false);
+  const [onceplayed, setOnceplayed] = useState(false);
 
   useEffect(() => {
     const audioCtx = new AudioContext();
@@ -36,16 +36,14 @@ export default function AppInside({ Component, pageProps }) {
     });
     // Play the audio when the user clicks on the first page
     document.addEventListener('click', () => {
-      /* if(onceplayed) {
-        //sound.stop();
+      if(onceplayed) {
+        //setOnceplayed(false);
       }
       else {
         sound.play();
         setOnceplayed(true);
-      } */
-      sound.once('load', function(){
-        sound.play();
-      });
+      }
+      
     });
 
     // Save the Howl instance and AudioContext to the global object for later use
