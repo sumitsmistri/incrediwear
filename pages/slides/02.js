@@ -6,7 +6,6 @@ import useAudio from "../../shared/useAudio";
 import Loader from "../../shared/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { nextslide } from "../../reducers/index";
-/* import HiddenButton from "../../components/HiddenButton"; */
 
 
 function Slide_02() {
@@ -20,8 +19,6 @@ function Slide_02() {
   const [formemail, setformemail] = useState(email);
   const [iswfhpr, setiswfhpr] = useState(false);
 
-  /* const hiddenbutton = useRef(null);
-  const audioRef = useRef(null); */
 
   /* const audio = useAudio("/slides/02/s02.mp3", {
     volume: 1,
@@ -29,27 +26,6 @@ function Slide_02() {
     loop: false,
   }); */
 
-  /* const [muted, setMuted] = useState(true);
-
-  useEffect(() => {
-    const playPromise = audioRef.current.play();
-    if (playPromise !== undefined) {
-      playPromise
-        .then(() => {
-          // Autoplay started!
-        })
-        .catch((error) => {
-          // Autoplay was prevented.
-          // You may want to display a message to the user explaining how to play the audio manually.
-        });
-    }
-  }, []); */
-
-  /* function handleButtonClick() {
-    audioRef.current.src = "/slides/02/s02.mp3";
-    audioRef.current.play();
-    setMuted(false);
-  } */
 
   const [slideData, setslideData] = useState({
     bg: "/slides/02/bg.jpg",
@@ -90,14 +66,10 @@ function Slide_02() {
 
 
   useEffect(() => {
-
-    //audio.play();
-    //hiddenbutton.current.click();
     
-    setTimeout( () => {
-      //audio.play();
-      //hiddenbutton.current.click();
-    }, 1000);
+    /* setTimeout( () => {
+      audio.play();
+    }, 1000); */
 
     setDim();
     window.addEventListener("resize", function (e) {
@@ -108,15 +80,6 @@ function Slide_02() {
       audio.pause();
     }; */
 
-    //const audioElement = new Audio("/slides/02/s02.mp3");
-
-    //audioElement.muted = true;
-    // autoplay on iOS devices
-    //const playPromise = audioElement.play();
-    
-    /* if (playPromise !== undefined) {
-      playPromise.then(() => {}).catch(() => {});
-    } */
     
   }, []);
 
@@ -402,24 +365,6 @@ function Slide_02() {
               </div>
             </div>
           </div>
-          {/* <button className="hidden_btn" ref={hiddenbutton}
-          onClick={async (e) => {
-            e.stopPropagation();
-            await new Promise((r) => setTimeout(r, 900));
-            await audio?.play();           
-          }}
-          style={{cursor: "pointer"}}
-          >
-            TEST
-          </button> */}
-        {/* <button onClick={handleButtonClick} className="hidden_btn" ref={hiddenbutton} >Play</button>
-        <audio
-          src="/slides/01/silent.mp3"
-          ref={audioRef}
-          playsInline
-          autoPlay
-          muted={muted}
-        /> */}
         </motion.main>
       ) : (
         <Loader />

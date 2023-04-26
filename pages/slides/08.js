@@ -12,6 +12,7 @@ function Slide_02() {
   const baseFontSize = 14.37;
   const router = useRouter();
   const { name } = useSelector((state) => state.incrediwear.user);
+
   const audio = useAudio("/slides/08/s08.mp3", {
     volume: 1,
     playbackRate: 1,
@@ -30,15 +31,15 @@ function Slide_02() {
     window.addEventListener("resize", function (e) {
       setDim();
     });
-    setTimeout(() => {
+    /* setTimeout(() => {
       audio.play();
-    }, 1000);
+    }, 1000); */
     let t = setTimeout(() => {
       router.push("/slides/09");
     }, 8000);
     return () => {
       clearTimeout(t);
-      audio.pause();
+      //audio.pause();
     };
   }, []);
 
@@ -80,6 +81,31 @@ function Slide_02() {
     b.style.fontSize = `${cFS}px`;
     return { w, h, cFS };
   };
+
+  useEffect(() => {
+    // Access the Howl instance and AudioContext from the global window object
+    const sound = window.sound;
+    const audioCtx = window.audioCtx;
+
+    // Create a new AudioBufferSourceNode and connect it to the AudioContext
+    const source = audioCtx.createBufferSource();
+    source.connect(audioCtx.destination);
+
+    // Load the audio file and start playing it
+    fetch('/slides/08/s08.mp3')
+      .then((response) => response.arrayBuffer())
+      .then((buffer) => {
+        audioCtx.decodeAudioData(buffer, (decodedData) => {
+          source.buffer = decodedData;
+          source.start(0);
+        });
+      });
+
+    return () => {
+      // Stop the audio when the page unmounts
+      source.stop();
+    };
+  }, []);
 
   return (
     <motion.div

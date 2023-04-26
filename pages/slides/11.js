@@ -13,11 +13,12 @@ function Slide_11() {
   const baseFontSize = 14.37;
   const router = useRouter();
   const { name } = useSelector((state) => state.incrediwear.user);
-  const audio = useAudio("/slides/11/t11.mp3", {
+
+  /* const audio = useAudio("/slides/11/t11.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
-  });
+  }); */
 
   const [slideData, setslideData] = useState({
     bg: "/slides/11/bg.jpg",
@@ -31,15 +32,15 @@ function Slide_11() {
     window.addEventListener("resize", function (e) {
       setDim();
     });
-    setTimeout(() => {
+    /* setTimeout(() => {
       audio.play();
-    }, 1000);
+    }, 1000); */
     let t = setTimeout(() => {
       router.push("/slides/12");
     }, 12000);
     return () => {
       clearTimeout(t);
-      audio.pause();
+      //audio.pause();
     };
   }, []);
 
@@ -81,6 +82,31 @@ function Slide_11() {
     b.style.fontSize = `${cFS}px`;
     return { w, h, cFS };
   };
+
+  useEffect(() => {
+    // Access the Howl instance and AudioContext from the global window object
+    const sound = window.sound;
+    const audioCtx = window.audioCtx;
+
+    // Create a new AudioBufferSourceNode and connect it to the AudioContext
+    const source = audioCtx.createBufferSource();
+    source.connect(audioCtx.destination);
+
+    // Load the audio file and start playing it
+    fetch('/slides/11/t11.mp3')
+      .then((response) => response.arrayBuffer())
+      .then((buffer) => {
+        audioCtx.decodeAudioData(buffer, (decodedData) => {
+          source.buffer = decodedData;
+          source.start(0);
+        });
+      });
+
+    return () => {
+      // Stop the audio when the page unmounts
+      source.stop();
+    };
+  }, []);
 
   return (
     <motion.div

@@ -13,11 +13,11 @@ function Slide_02() {
   const router = useRouter();
   const dispatch = useDispatch();
 
-  const audio = useAudio("/slides/06/t06.mp3", {
+  /* const audio = useAudio("/slides/06/t06.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
-  });
+  }); */
 
   const [slideData, setslideData] = useState({
     bg: "/slides/06/bg.jpg",
@@ -33,9 +33,9 @@ function Slide_02() {
       setDim();
     });
 
-    setTimeout(() => {
+    /* setTimeout(() => {
       audio.play();
-    }, 1000);
+    }, 1000); */
 
     let t = setTimeout(() => {
       router.push("/slides/07");
@@ -43,7 +43,7 @@ function Slide_02() {
 
     return () => {
       clearTimeout(t);
-      audio.pause();
+      //audio.pause();
     };
   }, []);
 
@@ -85,6 +85,31 @@ function Slide_02() {
     b.style.fontSize = `${cFS}px`;
     return { w, h, cFS };
   };
+
+  useEffect(() => {
+    // Access the Howl instance and AudioContext from the global window object
+    const sound = window.sound;
+    const audioCtx = window.audioCtx;
+
+    // Create a new AudioBufferSourceNode and connect it to the AudioContext
+    const source = audioCtx.createBufferSource();
+    source.connect(audioCtx.destination);
+
+    // Load the audio file and start playing it
+    fetch('/slides/06/t06.mp3')
+      .then((response) => response.arrayBuffer())
+      .then((buffer) => {
+        audioCtx.decodeAudioData(buffer, (decodedData) => {
+          source.buffer = decodedData;
+          source.start(0);
+        });
+      });
+
+    return () => {
+      // Stop the audio when the page unmounts
+      source.stop();
+    };
+  }, []);
 
   return (
     <motion.div
