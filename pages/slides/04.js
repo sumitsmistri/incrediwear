@@ -36,7 +36,7 @@ function Slide_02() {
       audio.play();
     }, 1000); */
 
-    let t = setTimeout(() => {
+    setTimeout(() => {
       router.push("/slides/05");
     }, 6000);
 

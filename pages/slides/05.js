@@ -7,7 +7,7 @@ import Loader from "../../shared/Loader";
 import RangeInput from "./RangeInput";
 import MenuSite from "./MenuSite";
 
-function Slide_02() {
+function Slide_05() {
   const [fistans, setfistans] = useState(false);
   const [secondans, setsecondans] = useState(false);
 
@@ -215,4 +215,4 @@ function Slide_02() {
   );
 }
 
-export default Slide_02;
+export default Slide_05;

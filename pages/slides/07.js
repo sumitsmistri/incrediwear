@@ -7,7 +7,7 @@ import Loader from "../../shared/Loader";
 import { useSelector } from "react-redux";
 import MenuSite from "./MenuSite";
 
-function Slide_02() {
+function Slide_07() {
   const [showMenu, setshowMenu] = useState(false);
   const baseImgSize = { w: 1920, h: 1080 };
   const baseFontSize = 14.37;
@@ -147,4 +147,4 @@ function Slide_02() {
   );
 }
 
-export default Slide_02;
+export default Slide_07;

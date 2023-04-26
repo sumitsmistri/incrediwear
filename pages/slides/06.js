@@ -7,7 +7,7 @@ import Loader from "../../shared/Loader";
 import MenuSite from "./MenuSite";
 import { useDispatch } from "react-redux";
 
-function Slide_02() {
+function Slide_06() {
   const baseImgSize = { w: 1920, h: 1080 };
   const baseFontSize = 14.37;
   const router = useRouter();
@@ -167,4 +167,4 @@ function Slide_02() {
   );
 }
 
-export default Slide_02;
+export default Slide_06;
