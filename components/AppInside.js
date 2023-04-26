@@ -23,33 +23,39 @@ export default function AppInside({ Component, pageProps }) {
       audio.play();
     }
   }); */
-  const [onceplayed, setOnceplayed] = useState(false);
+
+  const [audioPlayed, setaudioPlayed] = useState(false);
 
   useEffect(() => {
     const audioCtx = new AudioContext();
     const sound = new Howl({
       src: ['/slides/backgroundmusic_2.mp3'],
-      autoplay: true,
+      autoplay: false,
       loop: true,
       volume: 0.2,
       context: audioCtx,
     });
-    // Play the audio when the user clicks on the first page
-    document.addEventListener('click', () => {
-      if(onceplayed) {
-        //setOnceplayed(false);
-      }
-      else {
-        sound.play();
-        setOnceplayed(true);
-      }
-      
-    });
-
+    
     // Save the Howl instance and AudioContext to the global object for later use
     window.audioCtx = audioCtx;
     window.sound = sound;
+
+    // Play the audio when the user clicks on the first page
+    document.addEventListener('click', handleDocumentClick);
+
+    return () => {
+      document.removeEventListener('click', handleDocumentClick);
+    }
   });
+
+  const handleDocumentClick = () => {
+    // Play the audio if it hasn't been played before
+    if (!audioPlayed) {
+      console.log("click");
+      window.sound.play();
+      setaudioPlayed(true);
+    }
+  };
 
   return (
     <AnimatePresence>
