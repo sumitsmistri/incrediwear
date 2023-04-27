@@ -7,7 +7,7 @@ import Loader from "../../shared/Loader";
 import MenuSite from "./MenuSite";
 import { useSelector } from "react-redux";
 
-function Slide_02() {
+function Slide_04() {
   const bgs = useSelector((state) => state.incrediwear.bgs);
   const baseImgSize = { w: 1920, h: 1080 };
   const baseFontSize = 14.37;
@@ -94,8 +94,11 @@ function Slide_02() {
     const source = audioCtx.createBufferSource();
     source.connect(audioCtx.destination);
 
-    // Load the audio file and start playing it
-    fetch('/slides/04/s04.mp3')
+    // Load the audio file and start playing it    
+
+    setTimeout(() => {
+    
+      fetch('/slides/04/s04.mp3')
       .then((response) => response.arrayBuffer())
       .then((buffer) => {
         audioCtx.decodeAudioData(buffer, (decodedData) => {
@@ -103,7 +106,9 @@ function Slide_02() {
           source.start(0);
         });
       });
-
+      
+    }, 1000);
+    
     return () => {
       // Stop the audio when the page unmounts
       source.stop();
@@ -200,4 +205,4 @@ function Slide_02() {
   );
 }
 
-export default Slide_02;
+export default Slide_04;

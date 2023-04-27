@@ -6,7 +6,7 @@ import useAudio from "../../shared/useAudio";
 import Loader from "../../shared/Loader";
 import { useSelector } from "react-redux";
 
-function Slide_02() {
+function Slide_03() {
   const bgs = useSelector((state) => state.incrediwear.bgs);
   const baseImgSize = { w: 1920, h: 1080 };
   const baseFontSize = 14.37;
@@ -158,4 +158,4 @@ function Slide_02() {
   );
 }
 
-export default Slide_02;
+export default Slide_03;

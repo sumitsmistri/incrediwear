@@ -38,6 +38,7 @@ function Slide_01() {
         "/slides/02/bg.jpg",
         "/slides/03/bg.jpg",
         "/slides/04/bg.jpg",
+        "/slides/05/bg.jpg",
       ],
     });
   }, []);

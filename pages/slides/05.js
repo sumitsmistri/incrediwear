@@ -6,8 +6,10 @@ import useAudio from "../../shared/useAudio";
 import Loader from "../../shared/Loader";
 import RangeInput from "./RangeInput";
 import MenuSite from "./MenuSite";
+import { useSelector } from "react-redux";
 
 function Slide_05() {
+  const bgs = useSelector((state) => state.incrediwear.bgs);
   const [fistans, setfistans] = useState(false);
   const [secondans, setsecondans] = useState(false);
 
@@ -22,7 +24,7 @@ function Slide_05() {
   }); */
 
   const [slideData, setslideData] = useState({
-    bg: "/slides/05/bg.jpg",
+    bg: bgs[4],
     title_1: "<em>To start,</em><br/>",
     title_2:
       "here are 2 <em>critical questions</em><br/> about the customers in your store:",
@@ -172,7 +174,7 @@ function Slide_05() {
                 <br /> your store will have an injury or
                 <br /> chronic pain <em>this year</em>?
               </span>
-              <RangeInput ischanged={setfistans} />
+              {/* <RangeInput ischanged={setfistans} /> */}
             </motion.div>
             <div style={Styles.blankMargin} className="no_mob"></div>
             <motion.div
