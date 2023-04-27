@@ -110,7 +110,9 @@ function Slide_05() {
     source.connect(audioCtx.destination);
 
     // Load the audio file and start playing it
-    fetch('/slides/05/t05.mp3')
+    setTimeout(() => {
+      
+      fetch('/slides/05/t05.mp3')
       .then((response) => response.arrayBuffer())
       .then((buffer) => {
         audioCtx.decodeAudioData(buffer, (decodedData) => {
@@ -118,6 +120,9 @@ function Slide_05() {
           source.start(0);
         });
       });
+      
+    }, 1000);
+    
 
     return () => {
       // Stop the audio when the page unmounts
