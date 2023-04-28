@@ -24,7 +24,7 @@ function Slide_05() {
   }); */
 
   const [slideData, setslideData] = useState({
-    bg: bgs[4],
+    bg: "/slides/05/bg.jpg",
     title_1: "<em>To start,</em><br/>",
     title_2:
       "here are 2 <em>critical questions</em><br/> about the customers in your store:",
@@ -174,7 +174,7 @@ function Slide_05() {
                 <br /> your store will have an injury or
                 <br /> chronic pain <em>this year</em>?
               </span>
-              {/* <RangeInput ischanged={setfistans} /> */}
+              <RangeInput ischanged={setfistans} />
             </motion.div>
             <div style={Styles.blankMargin} className="no_mob"></div>
             <motion.div
