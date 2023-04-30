@@ -86,7 +86,7 @@ function Slide_28() {
   useEffect(() => {
     // Access the Howl instance and AudioContext from the global window object
     const sound = window.sound;
-    const audioCtx = window.audioCtx;
+    const audioCtx = window.audioCtx ? window.audioCtx : new AudioContext();
 
     // Create a new AudioBufferSourceNode and connect it to the AudioContext
     const source = audioCtx.createBufferSource();

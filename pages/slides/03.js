@@ -19,7 +19,7 @@ function Slide_03() {
   }); */
 
   const [slideData, setslideData] = useState({
-    bg: bgs[2],
+    bg: "/slides/03/bg.jpg",
     logo: "/incrediwear_logo.webp",
     title_1: `<em>Thanks </em><br/>${name != "" ? name : "JOHN"},`,
     title_2: "For taking a few minutes to watch this presentation",
@@ -83,7 +83,8 @@ function Slide_03() {
   useEffect(() => {
     // Access the Howl instance and AudioContext from the global window object
     const sound = window.sound;
-    const audioCtx = window.audioCtx;
+    const audioCtx = window.audioCtx ? window.audioCtx : new AudioContext();
+
 
     // Create a new AudioBufferSourceNode and connect it to the AudioContext
     const source = audioCtx.createBufferSource();

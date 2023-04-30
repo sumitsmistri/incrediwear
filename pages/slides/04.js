@@ -20,7 +20,7 @@ function Slide_04() {
   }); */
 
   const [slideData, setslideData] = useState({
-    bg: bgs[3],
+    bg: "/slides/04/bg.jpg",
     title_1: "It's going to be <em>interactive</em",
     title_2: "For taking a few minutes to watch this presentation",
   });
@@ -88,7 +88,8 @@ function Slide_04() {
   useEffect(() => {
     // Access the Howl instance and AudioContext from the global window object
     const sound = window.sound;
-    const audioCtx = window.audioCtx;
+    const audioCtx = window.audioCtx ? window.audioCtx : new AudioContext();
+
 
     // Create a new AudioBufferSourceNode and connect it to the AudioContext
     const source = audioCtx.createBufferSource();
