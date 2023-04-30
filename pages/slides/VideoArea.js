@@ -5,18 +5,6 @@ function VideoArea() {
   const [showvideo, setshowvideo] = useState(false);
   const dispatch = useDispatch();
 
-  /* const stopMusic = () => {
-    // Access the Howl instance and AudioContext from the global window object
-    const sound = window.sound;
-    const audioCtx = window.audioCtx;
-
-    // Create a new AudioBufferSourceNode and connect it to the AudioContext
-    const source = audioCtx.createBufferSource();
-    source.connect(audioCtx.destination);
-
-    // Stop the audio when the page unmounts
-    source.stop();
-  } */
 
   return (
     <>
@@ -27,6 +15,7 @@ function VideoArea() {
             alt="Thumbnail, story of Jackson Corley"
             className="jsx-383eab4433b76272"
             width={`100%`}
+            id="jackson_video_img"
           />
         </div>
       )}
@@ -37,7 +26,6 @@ function VideoArea() {
               type: "toggleBgMusic",
               payload: true,
             });
-            window.sound.pause();
           }}
           onPause={(e) => {
             dispatch({
@@ -51,6 +39,7 @@ function VideoArea() {
           controls
           className="jsx-383eab4433b76272"
           width={`100%`}
+          id="jackson_video"
         ></video>
       )}
     </>

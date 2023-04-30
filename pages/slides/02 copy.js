@@ -366,7 +366,7 @@ function Slide_02() {
           </button> */}
         {/* <button onClick={handleButtonClick} className="hidden_btn" ref={hiddenbutton} >Play</button>
         <audio
-          src="/slides/01/silent.mp3"
+          src="/silent.mp3"
           ref={audioRef}
           playsInline
           autoPlay

@@ -43,9 +43,32 @@ export default function AppInside({ Component, pageProps }) {
     // Play the audio when the user clicks on the first page
     document.addEventListener('click', handleDocumentClick);
 
+    if(document.getElementById('jackson_video_img')) {
+
+      const videoElement_img = document.getElementById('jackson_video_img');
+
+      videoElement_img.addEventListener('click', function() {
+        Howler.stop();
+      });
+    }
+    if(document.getElementById('jackson_video')) {
+
+      const videoElement = document.getElementById('jackson_video');
+
+      videoElement.addEventListener('play', function() {
+        Howler.stop();
+      });
+
+      videoElement.addEventListener('pause', function() {
+        window.sound.play();
+        setaudioPlayed(true);
+      });
+    }
+
     return () => {
       document.removeEventListener('click', handleDocumentClick);
     }
+
   });
 
   const handleDocumentClick = () => {
