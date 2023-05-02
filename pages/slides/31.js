@@ -144,7 +144,7 @@ function Slide_32() {
           >
             <div>
               <img
-                src="/slides/32/img_1.png"
+                src="/slides/32/img_1.jpg"
                 alt="study 1"
                 className="jsx-3d6d8b5904c975a9"
               />
@@ -168,7 +168,7 @@ function Slide_32() {
           >
             <div>
               <img
-                src="/slides/32/img_2.png"
+                src="/slides/32/img_2.jpg"
                 alt="study 1"
                 className="jsx-3d6d8b5904c975a9"
               />
@@ -190,7 +190,7 @@ function Slide_32() {
           >
             <div>
               <img
-                src="/slides/32/img_3.png"
+                src="/slides/32/img_3.jpg"
                 alt="study 3"
                 className="jsx-3d6d8b5904c975a9"
               />
@@ -218,7 +218,7 @@ function Slide_32() {
           >
             <div>
               <img
-                src="/slides/32/img_4.png"
+                src="/slides/32/img_4.jpg"
                 alt="study 4"
                 className="jsx-3d6d8b5904c975a9"
               />

@@ -11,7 +11,7 @@ function VideoArea() {
       {!showvideo && (
         <div onClick={() => setshowvideo(true)}>
           <img
-            src="/slides/10/preview.png"
+            src="/slides/10/preview.jpg"
             alt="Thumbnail, story of Jackson Corley"
             className="jsx-383eab4433b76272"
             width={`100%`}
