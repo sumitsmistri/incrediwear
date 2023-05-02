@@ -35,7 +35,7 @@ function Slide_38() {
       audio.play();
     }, 1000); */
     let t = setTimeout(() => {
-      router.push("/slides/38");
+      //router.push("/slides/38");
     }, 10000);
     return () => {
       clearTimeout(t);
@@ -152,13 +152,37 @@ function Slide_38() {
                 Do you have <em style={{ color: "#343233" }}>any</em> questions
                 about <em style={{ color: "#343233" }}>Incrediwear?</em>
               </motion.span>
-              <a
-                class="submitQustionLink"
-                href="mailto:gburris@incrediwear.com"
-              >
-                Submit Question
-              </a>
+              <div className="two_button">
+                <a
+                  class="submitQustionLink"
+                  href="mailto:gburris@incrediwear.com"
+                >
+                  Submit Question
+                </a>
+                <button
+                  className="button size-m move-ahead no-mob"
+                  onClick={() => router.push("/slides/38")}
+                >
+                  <div class="bg"></div>Move ahead
+                  <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                      <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path>
+                    </svg>
+                  </div>
+                </button>
+              </div>
             </motion.div>
+            <button
+                className="button size-m move-ahead no-pc"
+                onClick={() => router.push("/slides/38")}
+              >
+                <div class="bg"></div>Move ahead
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                    <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path>
+                  </svg>
+                </div>
+              </button>
           </motion.div>
 
           <MenuSite next={38} islight={false} previous={36} />

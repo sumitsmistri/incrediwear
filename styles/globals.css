@@ -713,7 +713,7 @@ li.jsx-cf090d7996995cd8 {
   font-style: normal;
   text-align: start;
 }
-/* .dot.jsx-cf090d7996995cd8 {
+.dot.onedot {
   background-color: currentColor;
   height: 0.4em;
   width: 0.4em;
@@ -722,14 +722,15 @@ li.jsx-cf090d7996995cd8 {
   flex-shrink: 0;
   margin-top: var(--list-top-spacing,.35em);
   color: var(--orange);
-} */
+}
 .dot.jsx-cf090d7996995cd8 {
   height: 100%;
-  width: 2.1em;
+  width: 1em;
   flex-shrink: 0;
   color: var(--orange);
   font-weight: 600;
-  text-align: right;
+  /* text-align: right; */
+  text-align: left;
 }
 ul.jsx-44adabf7c82e4b9f {
   margin-top: 3rem;
@@ -1746,8 +1747,13 @@ button {
 button:hover {
   transform: scale(1.1) !important;
 }
+.page_37 .two_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 a.submitQustionLink {
-  display: block;
+  /* display: block;
   font-size: 3rem;
   text-decoration: none;
   color: #fff;
@@ -1757,11 +1763,41 @@ a.submitQustionLink {
   margin-left: auto;
   margin-right: auto;
   padding: 16px;
+  border: 2px solid; */
+  font-size: 3rem;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 3rem;
+  background: #353233;
+  max-width: 45%;
+  margin-left: .5em;
+  margin-right: .5em;
+  padding: 16px;
   border: 2px solid;
+}
+.page_37 .move-ahead.no-pc {
+  display: none;
+}
+.page_37 .move-ahead {
+  font-size: 3rem;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 3rem;
+  background: var(--orange);
+  max-width: 45%;
+  padding: 15px;
+  border: 2px solid;
+  margin-left: .5em;
+  margin-right: .5em;
 }
 a.submitQustionLink:hover{  
   color: #353233;  
   background: #fff;
+}
+
+
+.page_38 .small_mob {
+  display: none;
 }
 
 @media (max-width: 575px) {
@@ -3115,7 +3151,32 @@ a.submitQustionLink:hover{
     font-size: 1.8rem;
     max-width: max-content;
   }
+  .page_37 .two_button {
+    flex-direction: column;
+  }
+  .page_37 .move-ahead {
+    font-size: 1.8rem;
+    width: 225px;
+    max-width: 100%;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
+  .page_37 .move-ahead.no-mob {
+    display: none;
+  }
+  .page_37 .move-ahead .icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  .page_37 .move-ahead.no-pc {
+    display: flex;
+    margin: 0;
+  }
   /* slide 38 */
 
   .page_38.slidePage {
@@ -3149,6 +3210,7 @@ a.submitQustionLink:hover{
   }
   .page_38 .small_mob {
     font-size: 2rem;
+    display: inline-block;
   }
   .page_38 .container.lastSlideBottom {
     top: unset;

@@ -158,7 +158,7 @@ function Slide_33() {
             >
               <span class="jsx-2945311205 color-white text size-2xl highlightGray">
                 <em>Want</em> to know what <em>Products</em> are Best for{" "}
-                <em>your</em>
+                <em>your </em>
                 customer&apos;s<em> needs?</em>
               </span>
             </motion.div>

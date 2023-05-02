@@ -151,7 +151,7 @@ function Slide_29() {
                   <div className="">
                     <span className="jsx-931690302 text size-m color-white">
                       <li className="jsx-cf090d7996995cd8 ">
-                        <div className="jsx-cf090d7996995cd8 dot color-orange">2. a)</div>
+                        <div className="jsx-cf090d7996995cd8 dot color-orange">2. </div>
                         <div className="jsx-cf090d7996995cd8">
                           <div className="jsx-b3dc3e38bbe26cf8">
                             <em>Thermoregulation</em> so that people don&apos;t{" "}
@@ -160,7 +160,7 @@ function Slide_29() {
                         </div>
                       </li>
                       <li className="jsx-cf090d7996995cd8 ">
-                        <div className="jsx-cf090d7996995cd8 dot color-orange">b)</div>
+                        <div className="jsx-cf090d7996995cd8 dot color-orange"></div>
                         <div className="jsx-cf090d7996995cd8">
                           <div className="jsx-b3dc3e38bbe26cf8">
                             <em>Continuous</em> delivery of <em>oxygen</em> and

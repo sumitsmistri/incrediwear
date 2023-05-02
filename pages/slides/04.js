@@ -12,6 +12,7 @@ function Slide_04() {
   const baseImgSize = { w: 1920, h: 1080 };
   const baseFontSize = 14.37;
   const router = useRouter();
+  
 
   /* const audio = useAudio("/slides/04/s04.mp3", {
     volume: 1,

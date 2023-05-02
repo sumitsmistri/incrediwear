@@ -179,7 +179,7 @@ function Slide_28() {
                         transition={{ delay: 2, duration: 0.5 }}
                         className="jsx-cf090d7996995cd8 "
                       >
-                        <div className="jsx-cf090d7996995cd8 dot color-orange">1. a)</div>
+                        <div className="jsx-cf090d7996995cd8 dot color-orange">1. </div>
                         <div className="jsx-cf090d7996995cd8">
                           <div className="jsx-b3dc3e38bbe26cf8">
                             Our infrared waves <em>warm up</em> the body like{" "}

@@ -141,7 +141,7 @@ function Slide_09() {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.5, duration: 0.5 }}
                   >
-                    <div className="jsx-cf090d7996995cd8 dot color-orange"></div>
+                    <div className="dot color-orange onedot"></div>
                     <div className="jsx-cf090d7996995cd8">
                       Used by over 200 professional sports teams across the
                       world
@@ -156,7 +156,7 @@ function Slide_09() {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 1, duration: 0.5 }}
                   >
-                    <div className="jsx-cf090d7996995cd8 dot color-orange"></div>
+                    <div className="dot color-orange onedot"></div>
                     <div className="jsx-cf090d7996995cd8">
                       Used by over 1,000 pro athletes
                     </div>
@@ -170,7 +170,7 @@ function Slide_09() {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 1.2, duration: 0.5 }}
                   >
-                    <div className="jsx-cf090d7996995cd8 dot color-orange"></div>
+                    <div className="dot color-orange onedot"></div>
                     <div className="jsx-cf090d7996995cd8">
                       Used by over 300 surgical centers
                     </div>
@@ -184,7 +184,7 @@ function Slide_09() {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 1.4, duration: 0.5 }}
                   >
-                    <div className="jsx-cf090d7996995cd8 dot color-orange"></div>
+                    <div className="dot color-orange onedot"></div>
                     <div className="jsx-cf090d7996995cd8">
                       As seen in GQ, Forbes...
                     </div>
