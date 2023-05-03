@@ -155,7 +155,7 @@ function Slide_38() {
               <div className="two_button">
                 <a
                   class="submitQustionLink"
-                  href="mailto:gburris@incrediwear.com"
+                  href="mailto:accounts@incrediwear.com"
                 >
                   Submit Question
                 </a>

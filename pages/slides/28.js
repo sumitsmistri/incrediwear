@@ -166,7 +166,7 @@ function Slide_29() {
                             <em>Continuous</em> delivery of <em>oxygen</em> and
                             nutrients on a <em>microscopic cellular level</em>{" "}
                             minimizes fatigue, thermo regulates the body, and
-                            <em>minimizes overheating</em>.
+                            <em> minimizes overheating</em>.
                           </div>
                         </div>
                       </li>

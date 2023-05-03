@@ -194,7 +194,7 @@ function Slide_39() {
                 <div className="jsx-1632397927">&nbsp;</div>
                 <span className="jsx-3898692377 text size-s color-standard">
                   <span className="jsx-d0a156eb4f78f1fb copyText">
-                    http://retail-education.incrediwear.com/
+                    https://azmq.incrediwearedu.com/
                   </span>
                 </span>
               </div>

@@ -39,7 +39,7 @@ function Slide_06() {
 
     let t = setTimeout(() => {
       router.push("/slides/07");
-    }, 20000);
+    }, 22000);
 
     return () => {
       clearTimeout(t);

@@ -37,7 +37,7 @@ function Slide_11() {
     }, 1000); */
     let t = setTimeout(() => {
       router.push("/slides/12");
-    }, 12000);
+    }, 14000);
     return () => {
       clearTimeout(t);
       //audio.pause();
