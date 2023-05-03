@@ -1,6 +1,7 @@
 import { Inter } from "@next/font/google";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import Loader from "../shared/Loader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,5 +14,7 @@ export default function Home() {
   });
 
   
-  return <>HOME</>;
+  return <>
+  <Loader/>
+  </>;
 }
