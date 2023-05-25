@@ -18,6 +18,8 @@ function Slide_03() {
     loop: false,
   }); */
 
+  
+
   const [slideData, setslideData] = useState({
     bg: "/slides/03/bg.jpg",
     logo: "/incrediwear_logo.webp",

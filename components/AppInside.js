@@ -4,6 +4,7 @@ import { Provider, useSelector } from "react-redux";
 import useAudio from "../shared/useAudio";
 import store from "../store/store";
 import { Howl } from "howler";
+import { useRouter } from "next/router";
 
 export default function AppInside({ Component, pageProps }) {
   const { stopBgMusic } = useSelector((state) => state.incrediwear.stopBgMusic);
@@ -24,7 +25,20 @@ export default function AppInside({ Component, pageProps }) {
     }
   }); */
 
+  const router = useRouter();
+
+  useEffect(() => {
+    const hasAcceptedTerms = localStorage.getItem('acceptedTerms');
+
+    if (!hasAcceptedTerms) {
+      router.push('/');
+    }
+  }, []);
+  
   const [audioPlayed, setaudioPlayed] = useState(false);
+  
+
+  const isHomePage = router.pathname === '/';
 
   useEffect(() => {
     const audioCtx = new AudioContext();
@@ -41,7 +55,9 @@ export default function AppInside({ Component, pageProps }) {
     window.sound = sound;
 
     // Play the audio when the user clicks on the first page
-    document.addEventListener('click', handleDocumentClick);
+    if(!isHomePage) {
+      document.addEventListener('click', handleDocumentClick);
+    }
 
     if(document.getElementById('jackson_video_img')) {
 
