@@ -31,13 +31,14 @@ export default function Home() {
 
       Notification.requestPermission().then((permission) => {
         if (permission === 'granted') {
+          new Notification('Notification 1');
           // User allowed push notifications
-          setNotificationAllowed(true);
+         /*  setNotificationAllowed(true);
           localStorage.setItem('acceptedTerms', 'true');
-          router.push("/slides/01");
+          router.push("/slides/01"); */
         } else {
           // User denied push notifications
-          setNotificationAllowed(false);
+          //setNotificationAllowed(false);
         }
       });
     }
@@ -68,7 +69,7 @@ export default function Home() {
 
     if (notificationAllowed == true) {
       // If push notifications are allowed, schedule them
-      scheduleNotifications();
+     // scheduleNotifications();
     }
   }, [notificationAllowed]);
 
