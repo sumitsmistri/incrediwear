@@ -8,11 +8,11 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
 
   const router = useRouter();
-  /* useEffect(() => {
-    router.push("/slides/01");
-  }); */
-
   useEffect(() => {
+    router.push("/slides/01");
+  });
+
+  /* useEffect(() => {
     const hasAcceptedTerms = localStorage.getItem('acceptedTerms');
 
     if (hasAcceptedTerms) {
@@ -20,7 +20,7 @@ export default function Home() {
     }
   }, []);
 
-  const [notificationAllowed, setNotificationAllowed] = useState(false);
+  const [notificationAllowed, setNotificationAllowed] = useState(false); */
 
   const handleAgree = () => {
     // Request permission for push notifications
@@ -44,7 +44,7 @@ export default function Home() {
     /* } */
   };
 
-  useEffect(() => {
+ /*  useEffect(() => {
     // Schedule push notifications after 15 and 20 minutes
     const scheduleNotifications = () => {
       const notificationOptions = {
@@ -71,9 +71,9 @@ export default function Home() {
       // If push notifications are allowed, schedule them
      // scheduleNotifications();
     }
-  }, [notificationAllowed]);
+  }, [notificationAllowed]); */
 
-  function isIOS() {
+  /* function isIOS() {
     const browserInfo = navigator.userAgent.toLowerCase();
     
     if (browserInfo.match('iphone') || browserInfo.match('ipad')) {
@@ -83,10 +83,10 @@ export default function Home() {
       return true;
     } 
     return false;
-  }
+  } */
 
 
-  const subscribeUser = async () => {
+  /* const subscribeUser = async () => {
     const serviceWorkerPath = '/service-worker.js';
     const registration = await navigator.serviceWorkerContainer.register(serviceWorkerPath);
   
@@ -111,16 +111,16 @@ export default function Home() {
 
   useEffect(() => {
     subscribeUser();
-  }, []);
+  }, []); */
   
   return <>
-  {/* <Loader/> */}
-    <div style={{padding: "20px", color: "white"}}>
+  <Loader/>
+    {/* <div style={{padding: "20px", color: "white"}}>
       <h1>Terms & Conditions</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <br/>
       <input type="checkbox" /> Please check the box<br/><br/>
       <button onClick={handleAgree} style={{padding: "10px", fontWeight: "bold"}}>Agree</button>
-    </div>
+    </div> */}
   </>;
 }

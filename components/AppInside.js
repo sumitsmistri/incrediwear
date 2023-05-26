@@ -27,13 +27,13 @@ export default function AppInside({ Component, pageProps }) {
 
   const router = useRouter();
 
-  useEffect(() => {
+  /* useEffect(() => {
     const hasAcceptedTerms = localStorage.getItem('acceptedTerms');
 
     if (!hasAcceptedTerms) {
       router.push('/');
     }
-  }, []);
+  }, []); */
   
   const [audioPlayed, setaudioPlayed] = useState(false);
   
