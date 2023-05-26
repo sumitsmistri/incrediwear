@@ -84,6 +84,34 @@ export default function Home() {
     } 
     return false;
   }
+
+
+  const subscribeUser = async () => {
+    const serviceWorkerPath = '/service-worker.js';
+    const registration = await navigator.serviceWorkerContainer.register(serviceWorkerPath);
+  
+    const permission = await Notification.requestPermission();
+    if (permission !== 'granted') {
+      console.log('Notification permission denied');
+      return;
+    }
+  
+    const subscription = await registration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: 'BOiMKG2yF_aKoHCRtlFzwrpf0mNmgUl22-cMx5cKl2GAwUVEH2108cPCNuEjMWY4Uwgeug78hgPzeYmvKI81_bc', // replace with your public key
+    });
+  
+    // Send the subscription object to the server
+    await fetch('/api/push', {
+      method: 'POST',
+      body: JSON.stringify({ subscription }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+  };
+
+  useEffect(() => {
+    subscribeUser();
+  }, []);
   
   return <>
   {/* <Loader/> */}
