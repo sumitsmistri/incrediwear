@@ -24,10 +24,10 @@ export default function Home() {
 
   const handleAgree = () => {
     // Request permission for push notifications
-    if (isIOS()) {
+    /* if (isIOS()) {
       localStorage.setItem('acceptedTerms', 'true');
       router.push("/slides/01");
-    }else {
+    }else { */
 
       Notification.requestPermission().then((permission) => {
         if (permission === 'granted') {
@@ -41,7 +41,7 @@ export default function Home() {
           //setNotificationAllowed(false);
         }
       });
-    }
+    /* } */
   };
 
   useEffect(() => {
