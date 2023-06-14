@@ -8,9 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
 
   const router = useRouter();
-  /* useEffect(() => {
+  useEffect(() => {
     router.push("/slides/01");
-  }); */
+  });
 
   /* useEffect(() => {
     const hasAcceptedTerms = localStorage.getItem('acceptedTerms');
@@ -114,13 +114,13 @@ export default function Home() {
   }, []); */
   
   return <>
-  {/* <Loader/> */}
-    <div style={{padding: "20px", color: "white"}}>
+  <Loader/>
+    {/* <div style={{padding: "20px", color: "white"}}>
       <h1>Terms & Conditions</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <br/>
       <input type="checkbox" /> Please check the box<br/><br/>
       <button onClick={handleAgree} style={{padding: "10px", fontWeight: "bold"}}>Agree</button>
-    </div>
+    </div> */}
   </>;
 }
