@@ -125,8 +125,8 @@ function Slide_01() {
               className={`first_text`}
             >
               <img
-                src="/slides/01/dicks-logo.jpeg"
-                alt="Dick's logo"
+                src="/slides/01/AZ_logo.png"
+                alt="AZ logo"
                 className="AZ_logo"
               />
               <span
