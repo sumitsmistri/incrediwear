@@ -156,16 +156,16 @@ function Slide_39() {
             >
               <span className="jsx-456089764 text size-2xl color-standard">
                 Thank you!<div style={Styles.blankMargin}>&nbsp;</div>
-                <em className="no_mob jsx-d0a156eb4f78f1fb">
+                {/* <em className="no_mob jsx-d0a156eb4f78f1fb">
                   {name != "" ? name : "JOHN"}
-                </em>
+                </em> */}
               </span>
               <span className="jsx-456089764 text size-l color-standard">
-                <em className="small_mob">
+                {/* <em className="small_mob">
                   {name != "" ? name : "JOHN"}
                 </em>
                 {" "}
-                , for taking your time to watch this presentation And{" "}
+                ,  */}for taking your time to watch this presentation And{" "}
                 <em>THANK YOU</em> for helping to share <em>Incrediwear</em>{" "}
                 with the <em>world</em>!
               </span>
