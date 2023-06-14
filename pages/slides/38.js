@@ -182,8 +182,8 @@ function Slide_39() {
             <div className="jsx-1098696574 flex bottom_div_flex">
               <div className="logo_holder">
                 <img
-                  src="/slides/01/AZ_logo.png"
-                  alt="AZ MediQuip logo"
+                  src="/slides/01/dicks-logo.jpeg"
+                  alt="Dick's logo"
                   className="AZ_last_logo"
                 />
               </div>

@@ -3274,9 +3274,10 @@ a.submitQustionLink:hover{
   opacity: 0;
 } */
 .AZ_logo {
-  max-width: 250px;
+  max-width: 120px;
   display: block;
   margin-bottom: 10px;
+  border-radius: 10px;
 }
 .page_38 .bottom_div_flex {
   flex-wrap: wrap;
@@ -3288,5 +3289,6 @@ a.submitQustionLink:hover{
   width: 100%;
 }
 .page_38 .logo_holder .AZ_last_logo {
-  max-width: 150px;
+  max-width: 120px;
+  border-radius: 10px;
 }
