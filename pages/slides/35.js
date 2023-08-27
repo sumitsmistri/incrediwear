@@ -10,52 +10,44 @@ import VideoArea from "./VideoArea";
 import AreaSelector from "./AreaSelector";
 import AreaSelectionresult from "./AreaSelectionresult";
 
-function Slide_36() {
+function Slide_34() {
   const baseImgSize = { w: 1920, h: 1080 };
   const baseFontSize = 14.37;
   const router = useRouter();
   const { name } = useSelector((state) => state.incrediwear.user);
-  /* const audio = useAudio("/slides/36/s.mp3", {
+  /* const audio = useAudio("/slides/35/s.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
   }); */
 
   const [slideData, setslideData] = useState({
-    bg: "/slides/36/bg.jpg",
+    bg: "/slides/35/bg.jpg",
     logo: "/incrediwear_logo.webp",
     title_1: `<em>Thanks</em><br/>${name != "" ? name : "JOHN"},`,
     title_2: "For taking a few minutes to watch this presentation",
   });
 
-  const [is_mob, setis_mob] = useState(true);
-
   useEffect(() => {
     setDim();
     window.addEventListener("resize", function (e) {
       setDim();
-      if (document.body.clientWidth >= 575) {
-        setis_mob(true);
-      }
-      else {
-        setis_mob(false);
-      }
     });
     /* setTimeout(() => {
       audio.play();
     }, 1000); */
-    let t = setTimeout(() => {
-      router.push("/slides/36");
-    }, 10000);
+    // let t = setTimeout(() => {
+    //   router.push("/slides/29");
+    // }, 25000);
     return () => {
-      clearTimeout(t);
+      //   clearTimeout(t);
       //audio.pause();
     };
   }, []);
 
   const Styles = {
     slide: {
-      backgroundImage: `url(${slideData.bg})`,
+      background: `linear-gradient(rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.82) 100%) 0% 0% / 100%`,
     },
     blankMargin: {
       height: "0px",
@@ -78,12 +70,6 @@ function Slide_36() {
       }
     }
 
-    if (document.body.clientWidth >= 575) {
-      setis_mob(true);
-    }
-    else {
-      setis_mob(false);
-    }
     // PAGE
     let sp = document.querySelector(".slidePage");
     if (sp) {
@@ -108,7 +94,7 @@ function Slide_36() {
     source.connect(audioCtx.destination);
 
     // Load the audio file and start playing it
-    fetch('/slides/36/s.mp3')
+    fetch('/slides/35/s.mp3')
       .then((response) => response.arrayBuffer())
       .then((buffer) => {
         audioCtx.decodeAudioData(buffer, (decodedData) => {
@@ -135,34 +121,35 @@ function Slide_36() {
         <title>Incrediwear Interactive - 35</title>
       </Helmet>
       {slideData.bg ? (
-        <motion.main
-          initial={{
-            backgroundPosition: "center",
-            backgroundSize: "150%",
-          }}
-          animate={{
-            backgroundPosition: "top left",
-            backgroundSize: "100%",
-          }}
-          transition={{ delay: 0, duration: 1 }}
-          style={Styles.slide}
-          className={`slidePage slidePage page_35`}
-        >
-          <div className={`container slider-36 isSlideContentWrapper`}>
+        <motion.main style={Styles.slide} className={`slidePage slidePage page_34`}>
+          <div className={`container slider-35 isSlideContentWrapper`}>
             <motion.div
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 1, duration: 0.5 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <span class="jsx-456089764 text size-xl color-white">
-                <em>Incrediwear</em> works best if it&apos;s worn{" "}
-                <em>before</em>, <em>during</em>, and <em>after</em> activity.
-                We have products for all <em>3 stages</em>
+              <span className="jsx-456089764 text size-2xl color-standard">
+                <img
+                  src={slideData.logo}
+                  alt="Incrediwear Logo"
+                  className="jsx-8e8a1ecf8722aa19"
+                />{" "}
+                - matching products for all requirements
               </span>
             </motion.div>
           </div>
 
-          <MenuSite next={36} islight={is_mob} previous={34} />
+          <div className="jsx-5a6ce50827d94a3 horizontalCenter forResult">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, duration: 1.5 }}
+            >
+              <AreaSelectionresult />
+            </motion.div>
+          </div>
+
+          <MenuSite next={36} islight={false} previous={34} />
         </motion.main>
       ) : (
         <Loader />
@@ -171,4 +158,4 @@ function Slide_36() {
   );
 }
 
-export default Slide_36;
+export default Slide_34;

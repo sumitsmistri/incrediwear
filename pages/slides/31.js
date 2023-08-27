@@ -6,7 +6,6 @@ import useAudio from "../../shared/useAudio";
 import Loader from "../../shared/Loader";
 import { useSelector } from "react-redux";
 import MenuSite from "./MenuSite";
-import VideoArea from "./VideoArea";
 
 function Slide_32() {
   const baseImgSize = { w: 1920, h: 1080 };
@@ -130,7 +129,7 @@ function Slide_32() {
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
-                class="jsx-2945311205 text size-xl color-white"
+                className="jsx-2945311205 text size-xl color-white"
               >
                 Our <em>scientific</em> studies are <em>game-changing</em>
               </motion.span>

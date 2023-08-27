@@ -8,19 +8,19 @@ import { useSelector } from "react-redux";
 import MenuSite from "./MenuSite";
 import Items_37 from "./Items_37";
 
-function Slide_38() {
+function Slide_37() {
   const baseImgSize = { w: 1920, h: 1080 };
   const baseFontSize = 14.37;
   const router = useRouter();
   const { name } = useSelector((state) => state.incrediwear.user);
-  /* const audio = useAudio("/slides/38/s.mp3", {
+  /* const audio = useAudio("/slides/37/s.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
   }); */
 
   const [slideData, setslideData] = useState({
-    bg: "/slides/38/bg.jpg",
+    bg: "/slides/37/bg.jpg",
     logo: "/incrediwear_logo.webp",
     title_1: `<em>Thanks</em><br/>${name != "" ? name : "JOHN"},`,
     title_2: "For taking a few minutes to watch this presentation",
@@ -34,11 +34,11 @@ function Slide_38() {
     /* setTimeout(() => {
       audio.play();
     }, 1000); */
-    let t = setTimeout(() => {
-      //router.push("/slides/38");
-    }, 10000);
+    // let t = setTimeout(() => {
+    //   router.push("/slides/37");
+    // }, 10000);
     return () => {
-      clearTimeout(t);
+      //   clearTimeout(t);
       //audio.pause();
     };
   }, []);
@@ -92,7 +92,7 @@ function Slide_38() {
     source.connect(audioCtx.destination);
 
     // Load the audio file and start playing it
-    fetch('/slides/38/s.mp3')
+    fetch('/slides/37/s.mp3')
       .then((response) => response.arrayBuffer())
       .then((buffer) => {
         audioCtx.decodeAudioData(buffer, (decodedData) => {
@@ -119,71 +119,19 @@ function Slide_38() {
         <title>Incrediwear Interactive - 37</title>
       </Helmet>
       {slideData.bg ? (
-        <motion.main
-          initial={{
-            backgroundPosition: "center",
-            backgroundSize: "200%",
-          }}
-          animate={{
-            backgroundPosition: "top center",
-            backgroundSize: "100%",
-          }}
-          transition={{ delay: 0, duration: 1 }}
-          style={Styles.slide}
-          className={`slidePage slidePage page_37`}
-        >
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            className={`container slider-38 bg-orange-transparent isSlideContentWrapper`}
-          >
+        <motion.main style={Styles.slide} className={`slidePage slidePage page_36`}>
+          <div className={`container slider-37 isSlideContentWrapper`}>
             <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1, duration: 1 }}
+              initial={{ x: 50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <motion.span
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1, duration: 1 }}
-                class="jsx-456089764 text size-2xl color-white"
-              >
-                Do you have <em style={{ color: "#343233" }}>any</em> questions
-                about <em style={{ color: "#343233" }}>Incrediwear?</em>
-              </motion.span>
-              <div className="two_button">
-                <a
-                  class="submitQustionLink"
-                  href="mailto:accounts@incrediwear.com"
-                >
-                  Submit Question
-                </a>
-                <button
-                  className="button size-m move-ahead no-mob"
-                  onClick={() => router.push("/slides/38")}
-                >
-                  <div class="bg"></div>Move ahead
-                  <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-                      <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path>
-                    </svg>
-                  </div>
-                </button>
-              </div>
+              <span className="jsx-456089764 text size-2xl color-standard">
+                Please check all that apply
+              </span>
+              <Items_37 />
             </motion.div>
-            <button
-                className="button size-m move-ahead no-pc"
-                onClick={() => router.push("/slides/38")}
-              >
-                <div class="bg"></div>Move ahead
-                <div class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-                    <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path>
-                  </svg>
-                </div>
-              </button>
-          </motion.div>
+          </div>
 
           <MenuSite next={38} islight={false} previous={36} />
         </motion.main>
@@ -194,4 +142,4 @@ function Slide_38() {
   );
 }
 
-export default Slide_38;
+export default Slide_37;

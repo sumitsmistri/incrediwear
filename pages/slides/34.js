@@ -8,21 +8,20 @@ import { useSelector } from "react-redux";
 import MenuSite from "./MenuSite";
 import VideoArea from "./VideoArea";
 import AreaSelector from "./AreaSelector";
-import AreaSelectionresult from "./AreaSelectionresult";
 
 function Slide_34() {
   const baseImgSize = { w: 1920, h: 1080 };
   const baseFontSize = 14.37;
   const router = useRouter();
   const { name } = useSelector((state) => state.incrediwear.user);
-  /* const audio = useAudio("/slides/35/s.mp3", {
+  /* const audio = useAudio("/slides/34/s.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
   }); */
 
   const [slideData, setslideData] = useState({
-    bg: "/slides/35/bg.jpg",
+    bg: "/slides/34/bg.jpg",
     logo: "/incrediwear_logo.webp",
     title_1: `<em>Thanks</em><br/>${name != "" ? name : "JOHN"},`,
     title_2: "For taking a few minutes to watch this presentation",
@@ -83,7 +82,6 @@ function Slide_34() {
     b.style.fontSize = `${cFS}px`;
     return { w, h, cFS };
   };
-
   useEffect(() => {
     // Access the Howl instance and AudioContext from the global window object
     const sound = window.sound;
@@ -94,7 +92,7 @@ function Slide_34() {
     source.connect(audioCtx.destination);
 
     // Load the audio file and start playing it
-    fetch('/slides/35/s.mp3')
+    fetch('/slides/34/s.mp3')
       .then((response) => response.arrayBuffer())
       .then((buffer) => {
         audioCtx.decodeAudioData(buffer, (decodedData) => {
@@ -109,6 +107,7 @@ function Slide_34() {
     };
   }, []);
 
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -121,31 +120,26 @@ function Slide_34() {
         <title>Incrediwear Interactive - 34</title>
       </Helmet>
       {slideData.bg ? (
-        <motion.main style={Styles.slide} className={`slidePage slidePage page_34`}>
-          <div className={`container slider-35 isSlideContentWrapper`}>
+        <motion.main style={Styles.slide} className={`slidePage slidePage page_33`}>
+          <div className={`container slider-34 isSlideContentWrapper`}>
             <motion.div
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <span class="jsx-456089764 text size-2xl color-standard">
-                <img
-                  src={slideData.logo}
-                  alt="Incrediwear Logo"
-                  class="jsx-8e8a1ecf8722aa19"
-                />{" "}
-                - matching products for all requirements
+              <span className="jsx-456089764 text size-2xl color-standard">
+                Please <em>select</em> an area of <em>pain</em>
               </span>
             </motion.div>
           </div>
 
-          <div className="jsx-5a6ce50827d94a3 horizontalCenter forResult">
+          <div className="jsx-5a6ce50827d94a3 horizontalCenter">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 1.5 }}
             >
-              <AreaSelectionresult />
+              <AreaSelector />
             </motion.div>
           </div>
 

@@ -7,38 +7,46 @@ import Loader from "../../shared/Loader";
 import { useSelector } from "react-redux";
 import MenuSite from "./MenuSite";
 import Items_37 from "./Items_37";
+import CopyClipboard from "./CopyClipboard";
 
-function Slide_38() {
+function Slide_39() {
   const baseImgSize = { w: 1920, h: 1080 };
   const baseFontSize = 14.37;
   const router = useRouter();
   const { name } = useSelector((state) => state.incrediwear.user);
-  /* const audio = useAudio("/slides/38/s.mp3", {
+  /* const audio = useAudio("/slides/39/s.mp3", {
     volume: 1,
     playbackRate: 1,
     loop: false,
   }); */
 
   const [slideData, setslideData] = useState({
-    bg: "/slides/38/bg.jpg",
+    bg: "/slides/39/bg.jpg",
     logo: "/incrediwear_logo.webp",
     title_1: `<em>Thanks</em><br/>${name != "" ? name : "JOHN"},`,
     title_2: "For taking a few minutes to watch this presentation",
   });
+  const [is_mob, setis_mob] = useState(true);
 
   useEffect(() => {
     setDim();
     window.addEventListener("resize", function (e) {
       setDim();
+      if (document.body.clientWidth >= 575) {
+        setis_mob(true);
+      }
+      else {
+        setis_mob(false);
+      }
     });
     /* setTimeout(() => {
       audio.play();
     }, 1000); */
-    let t = setTimeout(() => {
-      //router.push("/slides/38");
-    }, 10000);
+    // let t = setTimeout(() => {
+    //   router.push("/slides/38");
+    // }, 10000);
     return () => {
-      clearTimeout(t);
+      //   clearTimeout(t);
       //audio.pause();
     };
   }, []);
@@ -52,7 +60,7 @@ function Slide_38() {
       marginBottom: "0rem",
       marginLeft: "0rem",
       marginRight: "0rem",
-      marginTop: "3rem",
+      marginTop: "2rem",
     },
   };
 
@@ -66,6 +74,13 @@ function Slide_38() {
         let ch = (baseImgSize.h * w) / baseImgSize.w;
         h = ch;
       }
+    }
+
+    if (document.body.clientWidth >= 575) {
+      setis_mob(true);
+    }
+    else {
+      setis_mob(false);
     }
 
     // PAGE
@@ -92,7 +107,7 @@ function Slide_38() {
     source.connect(audioCtx.destination);
 
     // Load the audio file and start playing it
-    fetch('/slides/38/s.mp3')
+    fetch('/slides/39/s.mp3')
       .then((response) => response.arrayBuffer())
       .then((buffer) => {
         audioCtx.decodeAudioData(buffer, (decodedData) => {
@@ -116,7 +131,7 @@ function Slide_38() {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Incrediwear Interactive - 38</title>
+        <title>Incrediwear Interactive - 39</title>
       </Helmet>
       {slideData.bg ? (
         <motion.main
@@ -130,62 +145,64 @@ function Slide_38() {
           }}
           transition={{ delay: 0, duration: 1 }}
           style={Styles.slide}
-          className={`slidePage slidePage page_37`}
+          className={`slidePage slidePage page_38`}
         >
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            className={`container slider-38 bg-orange-transparent isSlideContentWrapper`}
-          >
+          <div className={`container slider-39 isSlideContentWrapper`}>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1, duration: 1 }}
+              transition={{ delay: 1, duration: 0.5 }}
+              className="text-s"
             >
-              <motion.span
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1, duration: 1 }}
-                className="jsx-456089764 text size-2xl color-white"
-              >
-                Do you have <em style={{ color: "#343233" }}>any</em> questions
-                about <em style={{ color: "#343233" }}>Incrediwear?</em>
-              </motion.span>
-              <div className="two_button">
-                <a
-                  className="submitQustionLink"
-                  href="mailto:accounts@incrediwear.com"
-                >
-                  Submit Question
-                </a>
-                <button
-                  className="button size-m move-ahead no-mob"
-                  onClick={() => router.push("/slides/39")}
-                >
-                  <div className="bg"></div>Move ahead
-                  <div className="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-                      <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path>
-                    </svg>
-                  </div>
-                </button>
-              </div>
+              <span className="jsx-456089764 text size-2xl color-standard">
+                Thank you!<div style={Styles.blankMargin}>&nbsp;</div>
+                {/* <em className="no_mob jsx-d0a156eb4f78f1fb">
+                  {name != "" ? name : "JOHN"}
+                </em> */}
+              </span>
+              <span className="jsx-456089764 text size-l color-standard">
+                {/* <em className="small_mob">
+                  {name != "" ? name : "JOHN"}
+                </em>
+                {" "}
+                ,  */}for taking your time to watch this presentation And{" "}
+                <em>THANK YOU</em> for helping to share <em>Incrediwear</em>{" "}
+                with the <em>world</em>!
+              </span>
             </motion.div>
-            <button
-                className="button size-m move-ahead no-pc"
-                onClick={() => router.push("/slides/39")}
-              >
-                <div className="bg"></div>Move ahead
-                <div className="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-                    <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path>
-                  </svg>
-                </div>
-              </button>
+            <div style={Styles.blankMargin}>&nbsp;</div>
+          </div>
+          
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 2, duration: 0.5 }}
+            className="jsx-977875503 container bg-none isSlideContentWrapper bottomContainer absolute lastSlideBottom"
+          >
+            <div className="jsx-1098696574 flex bottom_div_flex">
+              <div className="logo_holder">
+                <img
+                  src="/slides/01/AZ_logo.png"
+                  alt="AZ logo"
+                  className="AZ_last_logo"
+                />
+              </div>
+              <div className="">
+                <span className="jsx-2589450523 text size-s color-standard">
+                  Share this interactive presentation with others
+                </span>
+                <div className="jsx-1632397927">&nbsp;</div>
+                <span className="jsx-3898692377 text size-s color-standard">
+                  <span className="jsx-d0a156eb4f78f1fb copyText">
+                    https://azmq.incrediwearedu.com/
+                  </span>
+                </span>
+              </div>
+              <CopyClipboard />
+            </div>
           </motion.div>
 
-          <MenuSite next={39} islight={false} previous={37} />
+          <MenuSite next={39} islast={true} islight={is_mob} previous={38} />
         </motion.main>
       ) : (
         <Loader />
@@ -194,4 +211,4 @@ function Slide_38() {
   );
 }
 
-export default Slide_38;
+export default Slide_39;

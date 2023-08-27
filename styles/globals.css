@@ -3290,3 +3290,58 @@ a.submitQustionLink:hover{
 .page_38 .logo_holder .AZ_last_logo {
   max-width: 150px;
 }
+
+.page_32.new {
+  background-image: none !important;
+  background-color: #fff;
+}
+.page_32.new .slider-33 {
+  top: 40%;
+  margin: 0;
+  width: 60%;
+  left: 50%;
+  padding: 2rem;
+  transform: translate(-50%,-50%);
+}
+.page_32.new .slider-33 p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.page_32.new .slider-33 p:first-child {
+  color:#ff7e02;
+}
+.page_32.new .videobox.jsx-383eab4433b76272 {
+  width: 60rem;
+  margin: auto;
+  margin-top: 20px;
+}
+.page_32.new .videobox iframe {
+  width: 100%;
+  height: 100%;
+}
+.page_32.new .btnABS32 {
+  top: 100%;
+  right: unset;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width:575px) {
+  .page_32.new .slider-33 {
+    width: 100%;
+    top: 30%;
+  }
+  .page_32.new .slider-33 .size-xl {
+    font-size: 2rem;
+  }
+  .page_32.new .slider-33 .size-m {
+    font-size: 1rem;
+  }
+  .page_32.new .slider-33 .videobox {
+    width: 100%;
+  }
+  .page_32.new .btnABS32 .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}

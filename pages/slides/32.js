@@ -6,9 +6,9 @@ import useAudio from "../../shared/useAudio";
 import Loader from "../../shared/Loader";
 import { useSelector } from "react-redux";
 import MenuSite from "./MenuSite";
-import VideoArea from "./VideoArea";
+import VideoArea2 from "./VideoArea2"; 
 
-function Slide_33() {
+function Slide__32() {
   const baseImgSize = { w: 1920, h: 1080 };
   const baseFontSize = 14.37;
   const router = useRouter();
@@ -42,7 +42,7 @@ function Slide_33() {
       audio.play();
     }, 1000); */
     let t = setTimeout(() => {
-      router.push("/slides/33");
+      //router.push("/slides/33");
     }, 5000);
     return () => {
       clearTimeout(t);
@@ -105,14 +105,14 @@ function Slide_33() {
     source.connect(audioCtx.destination);
 
     // Load the audio file and start playing it
-    fetch('/slides/33/s.mp3')
+    fetch('/slides/silent.mp3')
       .then((response) => response.arrayBuffer())
       .then((buffer) => {
         audioCtx.decodeAudioData(buffer, (decodedData) => {
           source.buffer = decodedData;
           source.start(0);
         });
-      });
+        });
 
     return () => {
       // Stop the audio when the page unmounts
@@ -143,28 +143,46 @@ function Slide_33() {
           }}
           transition={{ delay: 0, duration: 1 }}
           style={Styles.slide}
-          className={`slidePage slidePage page_32`}
+          className={`slidePage slidePage page_32 new`}
         >
           <motion.div
             initial={{ marginBottom: -150, opacity: 0 }}
             animate={{ marginBottom: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className={`container bg-orange-transparent slider-33 isSlideContentWrapper`}
+            className={`container slider-33 isSlideContentWrapper`}
           >
             <motion.div
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <span class="jsx-2945311205 color-white text size-2xl highlightGray">
-                <em>Want</em> to know what <em>Products</em> are Best for{" "}
-                <em>your </em>
-                customer&apos;s<em> needs?</em>
-              </span>
+              <p className="text size-xl">
+                Incrediwear is NOT a Compression Product
+              </p>
+              <p className="text size-m">
+                Learn why Incrediwear is superior to traditional compression products
+              </p>
+              <div className="jsx-383eab4433b76272 videobox">
+                <VideoArea2 />
+              </div>
             </motion.div>
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 3, duration: 0.5 }}
+              className="jsx-dd33fbfc98d4eb22 button size-m color-undefined btnABS32"
+              onClick={() => router.push("/slides/33")}
+            >
+              <div className="jsx-dd33fbfc98d4eb22 bg"></div>Move ahead
+              <div className="jsx-dd33fbfc98d4eb22 icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                  <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path>
+                </svg>
+              </div>
+            </motion.button>
           </motion.div>
 
-          <MenuSite next={33} islight={is_mob} previous={31} />
+          <MenuSite next={33} /* islight={is_mob} */ previous={31} />
         </motion.main>
       ) : (
         <Loader />
@@ -173,4 +191,4 @@ function Slide_33() {
   );
 }
 
-export default Slide_33;
+export default Slide__32;
