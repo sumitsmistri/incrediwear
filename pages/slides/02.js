@@ -6,6 +6,7 @@ import useAudio from "../../shared/useAudio";
 import Loader from "../../shared/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { nextslide } from "../../reducers/index";
+import moment from "moment";
 
 
 function Slide_02() {
@@ -150,12 +151,16 @@ function Slide_02() {
     return { w, h, cFS };
   };
 
+  // Get current date and time
+  const currentDateTime = moment().format('YYYY-MM-DD HH:mm:ss');
+
   const handleClick = () => {
     if (formname !== '' &&  formemail !== '') {
       // Data add for append
       const newRow = {
+        Date: currentDateTime,
         Name: formname,
-        Email: formemail,
+        Email: formemail 
       };
   
       appendSpreadsheet(newRow);
